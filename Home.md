@@ -24,4 +24,25 @@ do_connect_ssr_server(tunnel);
 do_connect_ssr_server_done(tunnel);
     tunnel_cipher_client_encrypt(ctx->init_pkg)
     socket_write(outgoing, ctx->init_pkg); // tunnel_stage_ssr_auth_sent
+    
+do_ssr_auth_sent(tunnel);
+    if (tunnel_cipher_client_need_feedback(ctx->cipher)) {
+        socket_read(outgoing); // tunnel_stage_ssr_waiting_feedback;
+    }
+
+    do_ssr_receipt_for_feedback(struct tunnel_ctx *tunnel)
+        if (feedback) {
+            socket_write(outgoing, feedback); // tunnel_stage_ssr_receipt_of_feedback_sent
+        }    
+
+do_socks5_reply_success(tunnel);
+    socket_write(incoming, ctx->init_pkg); // tunnel_stage_auth_complition_done;
+
+do_launch_streaming(tunnel);
+    socket_read(incoming);  // tunnel_stage_streaming
+    socket_read(outgoing);  // tunnel_stage_streaming
+
+tunnel_traditional_streaming(tunnel, socket);
+
+tunnel_shutdown(tunnel);
 ```
