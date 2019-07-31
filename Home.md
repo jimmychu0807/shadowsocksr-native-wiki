@@ -25,6 +25,8 @@
 
 
 
+![Untitled](https://user-images.githubusercontent.com/30760636/62233812-eca65e00-b3fb-11e9-861c-141c5a9eafec.png)
+
 
 
 Welcome to the shadowsocksr-native wiki!
