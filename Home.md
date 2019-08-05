@@ -7,7 +7,7 @@
 # 序言
 好吧! 也许到时候公布新功能了. 关心这个项目的人, 绝大部分懂中文, 咱也就不装了, 不飙英文了, 累.
 
-据说 `SS` 和 `SSR` 被 `GFW` 精准识别了, 有6月初的梯子大屠杀为证, 咱也没有必要去辨别真伪了. 
+据说 [SS](https://github.com/shadowsocks/shadowsocks/tree/master) 和 [SSR](https://github.com/ShadowsocksR-Live/shadowsocksr) 被 [GFW](https://zh.wikipedia.org/wiki/%E9%98%B2%E7%81%AB%E9%95%BF%E5%9F%8E) 精准识别了, 有2019年6月初的梯子大屠杀为证, 咱也没有必要去辨别真伪了. 
 
 因为俺憋了个大招, `GFW` 不是老在搞 `深度包检测`(`DPI`) 吗? 
 `SS`/`SSR` 与 `GFW` 在这一点上斗了好多年, 我加点伪装, 你加大侦测力度, 我再加点混淆, 你再加点AI识别算法, 此消彼长, 犬牙交错, 无穷无尽. 俺厌倦透了.
