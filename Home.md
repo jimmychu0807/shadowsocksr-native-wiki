@@ -27,7 +27,7 @@
 
 `反向代理` 在现时的互联网中应用非常广泛。
 
-# `SSR` `over TLS` 原理
+# `SSR` `over` `TLS` 原理
 
 SSR over TLS (`SSRoT`) 就是直接利用了 `反向代理`, 在现代 web 服务器( 比如 [nginx](https://nginx.org/), [caddy](https://caddyserver.com/), [apache](https://httpd.apache.org/) 等)上, 添加一条设置, 当 `SSR` 客户端向 web `服务器` 请求特定资源时, web `服务器` 将这个请求直接转发到 `SSR` 服务器, `SSR` 服务器再将这条请求以约定算法解包后发送到 `目标网站`. 见下图.
 
