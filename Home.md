@@ -30,7 +30,7 @@
 
 # `SSR` `over` `TLS` 原理
 
-SSR over TLS (`SSRoT`) 就是直接利用了 `反向代理`, 在现代 web 服务器( 比如 [nginx](https://nginx.org/), [caddy](https://caddyserver.com/), [apache](https://httpd.apache.org/) 等)上, 添加一条设置, 当 `SSR` 客户端向 web `服务器` 请求特定资源时, web `服务器` 将这个请求直接转发到 `SSR` 服务器, `SSR` 服务器再将这条请求以约定算法解包后发送到 `目标网站`. 见下图.
+SSR over TLS (简称 `SSRoT`) 就是直接利用了 `反向代理`, 在现代 web 服务器( 比如 [nginx](https://nginx.org/), [caddy](https://caddyserver.com/), [apache](https://httpd.apache.org/) 等)上, 添加一条设置, 当 `SSR` 客户端向 web `服务器` 请求特定资源时, web `服务器` 将这个请求直接转发到 `SSR` 服务器, `SSR` 服务器再将这条请求以约定算法解包后发送到 `目标网站`. 见下图.
 
 ![Untitled](https://user-images.githubusercontent.com/30760636/62233812-eca65e00-b3fb-11e9-861c-141c5a9eafec.png)
 
