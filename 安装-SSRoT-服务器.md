@@ -12,7 +12,9 @@ sudo -i
 ```
 apt-get install nginx -y
 ```
-完毕以后, 配置文件是 /etc/nginx/nginx.conf, 文件里有如下两行
+完毕以后, 可以敲入 `nginx -v` 查看 `nginx` 的版本号, 也可以通过命令 `which nginx` 查看 `nginx` 到底安装在那个地方. 
+
+`nginx` 配置文件是 /etc/nginx/nginx.conf, 文件里有如下两行
 ```
 include /etc/nginx/conf.d/*.conf;
 include /etc/nginx/sites-enabled/*;
