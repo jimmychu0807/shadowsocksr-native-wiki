@@ -9,8 +9,9 @@
 
 据说 [SS](https://github.com/shadowsocks/shadowsocks/tree/master) 和 [SSR](https://github.com/ShadowsocksR-Live/shadowsocksr) 被 [GFW](https://zh.wikipedia.org/wiki/%E9%98%B2%E7%81%AB%E9%95%BF%E5%9F%8E) 精准识别了, 有2019年6月初的梯子大屠杀为证, 咱也没有必要去辨别真伪了. 
 
-因为俺憋了个大招, `GFW` 不是老在搞 `深度包检测`(`DPI`) 吗? 
-`SS`/`SSR` 与 `GFW` 在这一点上斗了好多年, 我加点伪装, 你加大侦测力度, 我再加点混淆, 你再加点AI识别算法, 此消彼长, 犬牙交错, 无穷无尽. 看得人厌倦透了.
+因为俺憋了个大招.
+
+`GFW` 不是老在搞 `深度包检测`(`DPI`) 吗? `SS`/`SSR` 与 `GFW` 在这一点上斗了好多年, 我加点伪装, 你加大侦测力度, 我再加点混淆, 你再加点AI识别算法, 此消彼长, 犬牙交错, 无穷无尽. 看得人厌倦透了.
 
 咱不装了, 咱来真的, 我们给 `GFW` 带来全新礼物, 给 `SSR` 添加了 `over TLS` 特性, 用真的 `HTTPS` 数据包翻墙! 您 `GFW` 慢慢算去!
 
