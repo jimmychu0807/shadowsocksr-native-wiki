@@ -4,6 +4,9 @@
 
 [安装 SSRoT 服务器](./安装-SSRoT-服务器)
 
+- [安装 nginx](./安装-SSRoT-服务器#安装-nginx-软件)
+
+
 test1
 
 test2
