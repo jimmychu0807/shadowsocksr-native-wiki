@@ -28,6 +28,21 @@ include /etc/nginx/sites-enabled/*;
 rm -rf /etc/nginx/sites-enabled/default
 ```
 
+创建我们的假站点文件夹 `/fakesite`, 并把样本主页文件复制到这里.
+```
+mkdir /fakesite
+cp /var/www/html/*.* /fakesite
+```
+
+在 `/etc/nginx/conf.d/` 文件夹内创建 子 配置文件 `ssr.conf`, 并用 `vi` 软件进行编辑
+```
+touch /etc/nginx/conf.d/ssr.conf
+vi /etc/nginx/conf.d/ssr.conf
+```
+通过 `vi` 输入如下内容
+```
+
+```
 
 
 head -c 12 /dev/random | base64
