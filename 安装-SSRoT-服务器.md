@@ -47,9 +47,9 @@ vi /etc/nginx/conf.d/ssr.conf
 ```
     server {
         listen 443 ssl;
-        ssl on;
-        ssl_certificate       /tls_files/file.crt;
-        ssl_certificate_key   /tls_files/file.key;
+#        ssl on;
+#        ssl_certificate       /tls_files/file.crt;
+#        ssl_certificate_key   /tls_files/file.key;
         ssl_protocols         TLSv1 TLSv1.1 TLSv1.2;
         ssl_ciphers           HIGH:!aNULL:!MD5;
         server_name           mygoodsite.com;
