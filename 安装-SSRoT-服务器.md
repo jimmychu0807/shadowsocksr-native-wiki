@@ -47,10 +47,26 @@ vi /etc/nginx/conf.d/ssr.conf
 通过 `vi` 输入如下内容
 ```
     server {
+        listen 80;
+        server_name localhost;
+        index index.html index.htm index.nginx-debian.html;
+        root  /fakesite;
+    }
+```
+然后使用下列命令让 nginx 重新加载配置使其生效
+```
+nginx -s reload
+```
+
+------------------------------------------
+下面是 网站安全证书建好以后的 配置, 以后再讲, 暂时略过.
+
+```
+    server {
         listen 443 ssl;
-#        ssl on;
-#        ssl_certificate       /tls_files/file.crt;
-#        ssl_certificate_key   /tls_files/file.key;
+        ssl on;
+        ssl_certificate       /tls_files/file.crt;
+        ssl_certificate_key   /tls_files/file.key;
         ssl_protocols         TLSv1 TLSv1.1 TLSv1.2;
         ssl_ciphers           HIGH:!aNULL:!MD5;
         server_name           mygoodsite.com;
