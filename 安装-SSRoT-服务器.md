@@ -87,6 +87,8 @@ nginx -s reload
     server {
         listen 80;
         server_name mygoodsite.com;
+        index index.html index.htm index.nginx-debian.html;
+        root  /fakesite;
 
         location / {
             rewrite ^/(.*)$ https://mygoodsite.com/$1 permanent;
