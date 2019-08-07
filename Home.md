@@ -56,10 +56,3 @@ SSR over TLS (简称 `SSRoT`) 就是直接利用了 `反向代理`, 在现代 we
 * 远端 `反向代理` 条目 `URL` 字串必须足够复杂, 足够随机, 以增加 `GFW` 穷举法猜算出来的难度. 一个随机生成的 `UUID` 字串就足够 `GFW` 喝一壶的, 况且我们也可以随时更换.
 * 远端 `反向代理` 服务器采用市面上常见的 web 服务器软件就可以, 没特殊要求.
 * 与 `反向代理` web 服务器进行通讯的 `SSRoT` 服务器也是基于 `WebSocket` 协议, 然后它将数据解包后转发到用户试图访问的 `目标网站`. 在收到 `目标网站` 的反馈信息以后, 它 将信息进行 加密, 封包后, 以 `WebSocket` 帧 发送给 `反向代理` 服务器, 反代 原封不动 地 转发给 `SSRoT` 客户端.
-
-
-Welcome to the shadowsocksr-native wiki!
-
-[Server Logic](./Server-Logic)
-
-[Client Logic](./Client-Logic)
