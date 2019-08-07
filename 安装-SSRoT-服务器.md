@@ -70,7 +70,7 @@ nginx -s reload
         ssl_protocols         TLSv1 TLSv1.1 TLSv1.2;
         ssl_ciphers           HIGH:!aNULL:!MD5;
         server_name           mygoodsite.com;
-        index index.html index.htm;
+        index index.html index.htm index.nginx-debian.html;
         root  /fakesite;
         error_page 400 = /400.html;
 
