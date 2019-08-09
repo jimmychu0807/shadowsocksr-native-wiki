@@ -158,3 +158,55 @@ head -c 12 /dev/random | base64
 nginx -s reload
 
 ```
+
+# 安装 SSR 服务器
+
+使用如下命令安装 SSR 服务器.
+```
+wget --no-check-certificate https://raw.githubusercontent.com/ShadowsocksR-Live/shadowsocksr-native/master/install/ssrn-install.sh
+chmod +x ssrn-install.sh
+./ssrn-install.sh 2>&1 | tee ssr-n.log
+
+```
+中间会要求你输入一些参数. 如果你懒, 一路回车也可以. 
+
+安装完毕以后, 用 `vi` 打开 `SSR` 配置文件 `/etc/ssr-native/config.json`
+```
+vi /etc/ssr-native/config.json
+
+```
+找到 `server_settings` 节区, 将 `listen_port` 替换成 `10000` 端口.
+
+找到 `client_settings` 节区, 将 `server_port` 的值替换成 `443` 端口.
+
+找到 `over_tls_settings` 节区, 改成下面这个样子, 将 `enable` 的值改成 `true`, 将 `mygoodsite.com` 替换成你的 `域名`, 将 `5mhk8LPOzXvjlAut` 替换成你前边生成的随机字串.
+```
+    "server_settings": {
+        "listen_address": "0.0.0.0",
+        "listen_port": 10000
+    },
+
+    "client_settings": {
+        "server": "12.34.56.78",
+        "server_port": 443,
+        "listen_address": "0.0.0.0",
+        "listen_port": 1080
+    },
+
+    "over_tls_settings": {
+        "enable": true,
+        "server_domain": "mygoodsite.com",
+        "path": "/5mhk8LPOzXvjlAut/",
+        "root_cert_file": ""
+    }
+
+```
+然后再用 `cat /etc/ssr-native/config.json` 命令检查一下, 如果没问题就可以复制粘贴到本地作为客户端的 配置文件了.
+
+最后使用如下命令重启 SSR 服务.
+```
+systemctl restart ssr-native.service
+
+```
+
+到此, 如果一切顺利, `SSRoT` 安装完成. 可以使用 `ssr-client` 客户端翻墙了.
