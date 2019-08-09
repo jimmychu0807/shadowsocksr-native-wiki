@@ -181,8 +181,11 @@ vi /etc/ssr-native/config.json
 
 找到 `client_settings` 节区, 将 `server_port` 的值替换成 `443` 端口.
 
-找到 `over_tls_settings` 节区, 将 `enable` 的值改成 `true`, 将 `mygoodsite.com` 替换成你的 `域名`, 将 `5mhk8LPOzXvjlAut` 替换成你前边生成的随机字串.
+找到 `over_tls_settings` 节区, 将 `enable` 的值改成 `true`, 将 `mygoodsite.com` 替换成你的 `域名`, 将 `path` 的值 
+`5mhk8LPOzXvjlAut` 替换成你前边生成的随机字串.
 ```
+    ...
+
     "server_settings": {
         "listen_address": "0.0.0.0",
         "listen_port": 10000
