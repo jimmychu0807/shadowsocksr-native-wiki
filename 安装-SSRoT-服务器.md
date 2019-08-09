@@ -8,6 +8,12 @@ ssh root@123.45.67.89 -p 22
 ```
 sudo -i
 ```
+预先安装一些必要的工具
+```
+apt-get update -y
+apt-get install make zlib1g zlib1g-dev build-essential autoconf libtool openssl libssl-dev -y
+apt install python3 python python-minimal cmake git -y
+```
 
 # 安装 `nginx` 软件
 
@@ -57,6 +63,35 @@ vi /etc/nginx/conf.d/ssr.conf
 ```
 nginx -s reload
 ```
+
+# 获取 数字安全证书
+
+[Let's Encrypt](https://letsencrypt.org/) 是免费、自动化、开放的证书签发服务, 它得到了 Mozilla、Cisco、Akamai、Electronic Frontier Foundation 和 Chrome 等众多公司和机构的支持，发展十分迅猛。
+
+申请 Let's Encrypt 证书不但免费，还非常简单，虽然每次只有 90 天的有效期，但可以通过脚本定期更新，配好之后一劳永逸。
+
+以下命令就是配置过程. 注意, 下列命令不能简单地复制粘贴, 请将这些命令复制到文本编辑器里, 将里边的两处 `mygoodsite.com` 字串替换成你自己的 `域名`, 然后才可以复制粘贴到 `ssh` 的命令行终端控制台里.
+```
+org_pwd=`pwd`
+
+mkdir /fakesite_cert
+cd /fakesite_cert
+openssl genrsa 4096 > account.key
+openssl genrsa 4096 > domain.key
+openssl req -new -sha256 -key domain.key -subj "/" -reqexts SAN -config <(cat /etc/ssl/openssl.cnf <(printf "[SAN]\nsubjectAltName=DNS:mygoodsite.com,DNS:www.mygoodsite.com")) > domain.csr
+wget https://raw.githubusercontent.com/diafygi/acme-tiny/master/acme_tiny.py
+python acme_tiny.py --account-key ./account.key --csr ./domain.csr --acme-dir /fakesite/.well-known/acme-challenge/ > ./signed.crt
+wget -O - https://letsencrypt.org/certs/lets-encrypt-x3-cross-signed.pem > intermediate.pem
+cat signed.crt intermediate.pem > chained.pem
+wget -O - https://letsencrypt.org/certs/isrgrootx1.pem > root.pem
+cat intermediate.pem root.pem > full_chained.pem
+
+cd ${org_pwd}
+
+```
+经过这样一通骚操作, 我们就已经在 `/fakesite_cert` 文件夹里创建好了数字证书.
+
+参考资料 [Let's Encrypt，免费好用的 HTTPS 证书](https://imququ.com/post/letsencrypt-certificate.html)
 
 ------------------------------------------
 **下面是 网站安全证书建好以后的 配置, 以后再讲, 暂时略过.**
