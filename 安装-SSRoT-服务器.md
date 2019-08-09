@@ -217,7 +217,7 @@ systemctl restart ssr-native.service
 
 # 归纳一下
 * web 服务器 nginx 安装后的可执行文件路径是 `/usr/sbin/nginx` 
-* nginx 配置文件的文件夹路径是 `/ect/nginx/`
+* nginx 配置文件的根文件夹路径是 `/etc/nginx/`
 * 假网站的根目录是 `/fakesite/`
 * 假网站的安全证书文件存放目录是 `/fakesite_cert/`
 * SSR 可执行文件的全路径 `/usr/bin/ssr-server`
