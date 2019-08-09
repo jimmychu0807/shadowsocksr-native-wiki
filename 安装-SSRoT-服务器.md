@@ -13,6 +13,7 @@ sudo -i
 apt-get update -y
 apt-get install make zlib1g zlib1g-dev build-essential autoconf libtool openssl libssl-dev -y
 apt install python3 python python-minimal cmake git -y
+
 ```
 
 # 安装 `nginx` 软件
@@ -21,6 +22,7 @@ apt install python3 python python-minimal cmake git -y
 命令为
 ```
 apt-get install nginx -y
+
 ```
 完毕以后, 可以敲入 `nginx -v` 查看 `nginx` 的版本号, 也可以通过命令 `which nginx` 查看 `nginx` 到底安装在哪个地方. 
 
@@ -36,6 +38,7 @@ include /etc/nginx/sites-enabled/*;
 为了避免这个文件对我们以后的操作造成困惑、干扰. 把这个文件删了再说
 ```
 rm -rf /etc/nginx/sites-enabled/default
+
 ```
 
 创建我们的假站点文件夹 `/fakesite`, 并把样本主页文件复制到这里.
@@ -43,12 +46,14 @@ rm -rf /etc/nginx/sites-enabled/default
 mkdir /fakesite
 mkdir -p /fakesite/.well-known/acme-challenge/
 cp /var/www/html/*.* /fakesite
+
 ```
 
 在 `/etc/nginx/conf.d/` 文件夹内创建 子 配置文件 `ssr.conf`, 并用 `vi` 软件进行编辑
 ```
 touch /etc/nginx/conf.d/ssr.conf
 vi /etc/nginx/conf.d/ssr.conf
+
 ```
 通过 `vi` 输入如下内容
 ```
@@ -62,6 +67,7 @@ vi /etc/nginx/conf.d/ssr.conf
 然后使用下列命令让 nginx 重新加载配置使其生效
 ```
 nginx -s reload
+
 ```
 
 # 获取 数字安全证书
@@ -138,8 +144,10 @@ cd ${org_pwd}
 随机字串 的生成很简单, 如下命令足矣, 注意查看生成的字串, 如果含有斜杠 `/` 加号 `+` 或者等号 `=`, 就再次生成, 直到没有为止.
 ```
 head -c 12 /dev/random | base64
+
 ```
 最后使用下列命令使配置生效
 ```
 nginx -s reload
+
 ```
