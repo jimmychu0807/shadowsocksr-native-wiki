@@ -95,7 +95,7 @@ cat intermediate.pem root.pem > full_chained.pem
 cd ${org_pwd}
 
 ```
-经过这样一通骚操作, 我们就已经在 `/fakesite_cert` 文件夹里创建好了数字证书.
+经过这样一通**骚**操作, 我们就已经在 `/fakesite_cert` 文件夹里创建好了数字证书.
 
 参考资料 [Let's Encrypt，免费好用的 HTTPS 证书](https://imququ.com/post/letsencrypt-certificate.html)
 
