@@ -99,15 +99,21 @@ cd ${org_pwd}
 
 参考资料 [Let's Encrypt，免费好用的 HTTPS 证书](https://imququ.com/post/letsencrypt-certificate.html)
 
-------------------------------------------
-**下面是 网站安全证书建好以后的 配置, 以后再讲, 暂时略过.**
+# 将 数字安全证书 部署到 web 服务器
 
+将 原 web 服务器 配置文件 删掉, 再用 `vi` 软件重新生成 配置.
+```
+rm -rf /etc/nginx/conf.d/ssr.conf
+vi /etc/nginx/conf.d/ssr.conf
+
+```
+通过 `vi` 输入如下内容, 注意 替换里边的 `mygoodsite.com` 字串为您的 `域名`
 ```
     server {
         listen 443 ssl;
         ssl on;
-        ssl_certificate       /tls_files/file.crt;
-        ssl_certificate_key   /tls_files/file.key;
+        ssl_certificate       /fakesite_cert/chained.pem;
+        ssl_certificate_key   /fakesite_cert/domain.key;
         ssl_protocols         TLSv1 TLSv1.1 TLSv1.2;
         ssl_ciphers           HIGH:!aNULL:!MD5;
         server_name           mygoodsite.com;
@@ -140,6 +146,7 @@ cd ${org_pwd}
 注意
 - 其中的三处 `mygoodsite.com` 字串, 替换成你自己的 `域名`. 
 - `5mhk8LPOzXvjlAut` 字串就是 `反向代理` 的入口, 必须替换成你自己随机生成的字串, 不能偷懒, 否则 `GFW` 的网络爬虫会爬取到本网页, 将 `5mhk8LPOzXvjlAut` 加入破解词库, `GFW` 分分钟将你拿下.
+- 由于 `vi` 编辑器非常原始, 编辑文字极其不便, 建议在本地纯文本编辑器里弄好了以后, 一次性复制粘贴到 `vi` 编辑器里, 然后保存退出.
 
 随机字串 的生成很简单, 如下命令足矣, 注意查看生成的字串, 如果含有斜杠 `/` 加号 `+` 或者等号 `=`, 就再次生成, 直到没有为止.
 ```
