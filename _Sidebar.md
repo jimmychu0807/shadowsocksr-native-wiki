@@ -10,12 +10,7 @@
 
 - [将 数字安全证书 部署到 web 服务器](./安装-SSRoT-服务器#将-数字安全证书-部署到-web-服务器)
 
-test1
-
-test2
-
-test3
-
+- [安装 SSR 服务器](./安装-SSRoT-服务器#安装-ssr-服务器)
 
 [Server Logic](./Server-Logic)
 
