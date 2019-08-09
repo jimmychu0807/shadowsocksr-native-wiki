@@ -9,6 +9,8 @@
 - [安装 SSR 服务器](./安装-SSRoT-服务器#安装-ssr-服务器)
 - [归纳一下](./安装-SSRoT-服务器#归纳一下)
 
+[客户端用法](./客户端用法)
+
 [Server Logic](./Server-Logic)
 
 [Client Logic](./Client-Logic)
