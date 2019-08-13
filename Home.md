@@ -5,7 +5,7 @@
 - [SSRoT 技术概览](#ssrot-技术概览)
 
 # 序言
-好吧! 也许到时候公布新功能了. 关心这个项目的人, 绝大部分懂中文, 咱也就不装了, 不飙英文了, 累.
+好吧! 也许是时候公布新功能了. 关心这个项目的人, 绝大部分懂中文, 咱也就不装了, 不飙英文了, 累.
 
 据说 [SS](https://github.com/shadowsocks/shadowsocks/tree/master) 和 [SSR](https://github.com/ShadowsocksR-Live/shadowsocksr) 被 [GFW](https://zh.wikipedia.org/wiki/%E9%98%B2%E7%81%AB%E9%95%BF%E5%9F%8E) 精准识别了, 有2019年6月初的梯子大屠杀为证, 咱也没有必要去辨别真伪了. 
 
