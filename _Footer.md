@@ -1,1 +1,1 @@
-如有任何疑问, 请提 issues.
+如有任何疑问, 请到 [Issues](https://github.com/ShadowsocksR-Live/shadowsocksr-native/issues) 提出.
