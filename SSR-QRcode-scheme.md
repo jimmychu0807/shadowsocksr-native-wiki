@@ -1,9 +1,10 @@
 # 基本定义
 
 定义 `base64` 为 `URL safe base64`, 且不带 `padding` (没有末尾的等于号), 具体格式如下：
-```
+
+`
 ssr://base64(host:port:protocol:method:obfs:base64pass/?obfsparam=base64param&protoparam=base64param&remarks=base64remarks&group=base64group&udpport=0&uot=0)
-```
+`
 
 其中, `base64pass` 及之前以 `:` 分隔的, 不可省略, 而 `/?` 及其后面的内容, 可按需要写上.
 
@@ -24,13 +25,15 @@ ssr://base64(host:port:protocol:method:obfs:base64pass/?obfsparam=base64param&pr
 备注： 测试中文
 ```
 生成的带备注结果：
-```
+`
 ssr://MTI3LjAuMC4xOjEyMzQ6YXV0aF9hZXMxMjhfbWQ1OmFlcy0xMjgtY2ZiOnRsczEuMl90aWNrZXRfYXV0aDpZV0ZoWW1KaS8_b2Jmc3BhcmFtPVluSmxZV3QzWVRFeExtMXZaUSZyZW1hcmtzPTVyV0w2Sy1WNUxpdDVwYUg
-```
+`
+
 生成的不带备注的标准结果（结果唯一）：
-```
+`
 ssr://MTI3LjAuMC4xOjEyMzQ6YXV0aF9hZXMxMjhfbWQ1OmFlcy0xMjgtY2ZiOnRsczEuMl90aWNrZXRfYXV0aDpZV0ZoWW1KaS8_b2Jmc3BhcmFtPVluSmxZV3QzWVRFeExtMXZaUQ
-```
+`
+
 如果你生成的不带备注的结果结果与上面的不一致，那么请检查实现代码，否则可能导致部分环境下识别错误。
 
 多链接组合
