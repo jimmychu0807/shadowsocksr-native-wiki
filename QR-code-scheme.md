@@ -3,7 +3,7 @@
 定义 `base64` 为 `URL safe base64`, 且不带 `padding` (没有末尾的等于号), 具体格式如下：
 
 `
-ssr://base64(host:port:protocol:method:obfs:base64pass/?obfsparam=base64param&protoparam=base64param&remarks=base64remarks&group=base64group&udpport=0&uot=0)
+ssr://base64(host:port:protocol:method:obfs:base64pass/?obfsparam=base64param&protoparam=base64param&remarks=base64remarks&group=base64group&udpport=0&uot=0&ot_enable=0&ot_domain=base64domain&ot_path=base64path)
 `
 
 其中, `base64pass` 及之前以 `:` 分隔的, 不可省略, 而 `/?` 及其后面的内容, 可按需要写上.
