@@ -53,7 +53,7 @@ cp /var/www/html/*.* /fakesite
 
 在 `/etc/nginx/conf.d/` 文件夹内创建 子 配置文件 `ssr.conf`, 并用 `vi` 软件进行编辑
 ```
-touch /etc/nginx/conf.d/ssr.conf
+rm -rf /etc/nginx/conf.d/*
 vi /etc/nginx/conf.d/ssr.conf
 
 ```
@@ -68,7 +68,8 @@ vi /etc/nginx/conf.d/ssr.conf
 ```
 然后使用下列命令让 nginx 重新加载配置使其生效
 ```
-nginx -s reload
+nginx -s stop
+nginx
 
 ```
 
@@ -148,6 +149,7 @@ vi /etc/nginx/conf.d/ssr.conf
 注意
 - 其中的三处 `mygoodsite.com` 字串, 替换成你自己的 `域名`. 
 - `5mhk8LPOzXvjlAut` 字串就是 `反向代理` 的入口, 必须替换成你自己随机生成的字串, 不能偷懒, 否则 `GFW` 的网络爬虫会爬取到本网页, 将 `5mhk8LPOzXvjlAut` 加入破解词库, `GFW` 分分钟将你拿下.
+- 大家可以看到, 该节区有句 `proxy_pass http://127.0.0.1:10000;` 表明, 为 `反代` 提供服务的 `SSR` 服务器必须监听在 `127.0.0.1:10000` 上.
 - 由于 `vi` 编辑器非常原始, 也不支持鼠标, 编辑文字极其不便, 建议在本地纯文本编辑器里弄好了以后, 一次性复制粘贴到 `vi` 编辑器里, 然后保存退出.
 
 随机字串 的生成很简单, 如下命令足矣, 注意查看生成的字串, 如果含有斜杠 `/` 加号 `+` 或者等号 `=`, 就再次生成, 直到没有为止.
@@ -179,9 +181,9 @@ vi /etc/ssr-native/config.json
 ```
 改成下面这个样子:
 
-找到 `server_settings` 节区, 将 `listen_port` 的值替换成 `10000` 端口.
+找到 `server_settings` 节区, 将监听端口 `listen_port` 的值替换成 `10000` 端口.
 
-找到 `client_settings` 节区, 将 `server_port` 的值替换成 `443` 端口.
+找到 `client_settings` 节区, 将 `server_port` 的值替换成 `HTTPS` web 服务器端口 `443` 端口.
 
 找到 `over_tls_settings` 节区, 将 `enable` 的值改成 `true`, 将 `server_domain` 的值 `mygoodsite.com` 替换成你的 `域名`, 将 `path` 的值 `5mhk8LPOzXvjlAut` 替换成你前边生成的随机字串, 注意前后的斜杠 `/` 必须保留不能删了.
 ```
