@@ -10,7 +10,7 @@ ssr://base64(host:port:protocol:method:obfs:base64pass/?obfsparam=base64param&pr
 
 字符串使用 `UTF8` 编码, 编码后必须以 `urlsafebase64` 编码，包括密码、混淆参数、协议参数、备注、group,
 
-`udpport` 参数及 `uot` 目前仅 C# 客户端支持
+`udpport` 参数及 `uot` 目前没有使用, 也许永远不会使用了.
 
 示例：
 ```
