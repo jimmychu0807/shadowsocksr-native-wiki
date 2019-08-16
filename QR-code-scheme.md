@@ -8,7 +8,9 @@ ssr://base64(host:port:protocol:method:obfs:base64pass/?obfsparam=base64param&pr
 
 其中, `base64pass` 及之前以 `:` 分隔的, 不可省略, 而 `/?` 及其后面的内容, 可按需要写上.
 
-字符串使用 `UTF8` 编码, 编码后必须以 `urlsafebase64` 编码，包括密码、混淆参数、协议参数、备注、group,
+对 `over TLS` 的相关信息是 `ot_enable`, `ot_domain`, `ot_path`.
+
+字符串使用 `UTF8` 编码, 编码后必须以 `urlsafebase64` 编码，包括 密码、混淆参数、协议参数、备注、group、ot_domain、ot_path.
 
 `udpport` 参数及 `uot` 目前没有使用, 也许永远不会使用了.
 
