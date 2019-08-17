@@ -162,6 +162,35 @@ head -c 12 /dev/random | base64
 nginx -s reload
 
 ```
+# 证书自动更新 计划任务 设置
+用 `vi` 在 `/fakesite_cert` 文件夹 创建 计划任务脚本 `renew_cert.sh`
+```
+vi /fakesite_cert/renew_cert.sh
+
+```
+通过 `vi` 输入如下内容
+```
+#!/bin/bash
+
+cd /fakesite_cert/
+python acme_tiny.py --account-key ./account.key --csr ./domain.csr --acme-dir ${site_dir}/.well-known/acme-challenge/ > ./signed.crt || exit
+wget -O - https://letsencrypt.org/certs/lets-encrypt-x3-cross-signed.pem > intermediate.pem
+cat signed.crt intermediate.pem > chained.pem
+nginx -s reload
+```
+然后给这个文件赋予 可执行 属性
+```
+chmod +x /fakesite_cert/renew_cert.sh
+```
+将这个脚本写入 计划任务 crontab 中
+```
+service cron stop
+rm -rf tmp_info
+crontab -l > tmp_info
+echo "0 0 1 * * /fakesite_cert/renew_cert.sh >/dev/null 2>&1" >> tmp_info && crontab tmp_info && rm -rf tmp_info
+service cron start
+
+```
 
 # 安装 SSR 服务器
 
