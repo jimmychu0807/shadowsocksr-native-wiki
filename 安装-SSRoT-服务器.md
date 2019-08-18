@@ -248,13 +248,13 @@ systemctl restart ssr-native.service
 
 到此, 如果一切顺利, `SSRoT` 安装完成. 可以使用 `ssr-client` 客户端翻墙了.
 
-当然. 这时候位于 `/fakesite` 文件夹内的网站内容, 还是一个孤零零的示例网页文件, 下一步您得尽快填补一些看起来有趣的内容. 否则, 等 `GFW` 醒过味儿来, 就可能封杀这个网站了.
+当然. 这时候位于 `/fakesite/` 文件夹内的网站内容, 还是一个孤零零的示例网页文件, 下一步您得尽快填补一些看起来有趣的内容. 否则, 等 `GFW` 醒过闷儿来, 就可能封杀这个网站了.
 
 # 归纳一下
-* web 服务器 nginx 安装后的可执行文件路径是 `/usr/sbin/nginx` 
-* nginx 配置文件的根文件夹路径是 `/etc/nginx/`
-* nginx 针对假网站的配置文件全路径是 `/etc/nginx/conf.d/ssr.conf`
-* 假网站的根目录是 `/fakesite/`
-* 假网站的安全证书文件存放目录是 `/fakesite_cert/`
+* web 服务器 nginx 安装后的可执行文件路径 `/usr/sbin/nginx` 
+* nginx 配置文件的根文件夹路径 `/etc/nginx/`
+* nginx 针对假网站的配置文件全路径 `/etc/nginx/conf.d/ssr.conf`
+* 假网站的根目录 `/fakesite/`
+* 假网站的安全证书文件存放目录 `/fakesite_cert/`
 * SSR 可执行文件的全路径 `/usr/bin/ssr-server`
 * SSR 配置文件全路径 `/etc/ssr-native/config.json`
