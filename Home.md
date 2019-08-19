@@ -4,6 +4,8 @@
 - [SSR over TLS 原理](#ssr-over-tls-原理)
 - [SSRoT 技术概览](#ssrot-技术概览)
 
+[English version](https://palitechsociety.blogspot.com/2019/08/shadowsocksr-over-tls-ssrot-server.html)
+
 # 序言
 好吧! 也许是时候公布新功能了. 关心这个项目的人, 绝大部分懂中文, 咱也就不装了, 不飙英文了, 累.
 
