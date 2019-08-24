@@ -250,7 +250,7 @@ systemctl restart ssr-native.service
 
 当然. 这时候位于 `/fakesite/` 文件夹内的网站内容, 还是一个孤零零的示例网页文件, 下一步您得尽快填补一些看起来有趣的内容. 否则, 等 `GFW` 醒过闷儿来, 就可能封杀这个网站了.
 
-# 归纳一下
+# 汇总一下
 * web 服务器 nginx 安装后的可执行文件路径 `/usr/sbin/nginx` 
 * nginx 配置文件的根文件夹路径 `/etc/nginx/`
 * nginx 针对假网站的配置文件全路径 `/etc/nginx/conf.d/ssr.conf`
