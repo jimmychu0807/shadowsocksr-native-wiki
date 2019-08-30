@@ -55,7 +55,8 @@ SSR over TLS (简称 `SSRoT`) 就是直接利用了 `反向代理`, 在现代 we
 
 # `SSRoT` 技术概览
 
-* 客户端是标准的 [SOCKS5](https://zh.wikipedia.org/wiki/SOCKS) 服务器, `客户端` 与远端 web `服务器` 以 `HTTPS` 协议通讯, 通讯内容是协商升级成 [WebSocket](https://zh.wikipedia.org/wiki/WebSocket) 协议, 协商成功后, 就以 `WebSocket` 协议进行基于长连接的数据交换, 直到某一方关闭连接. [WebSocket 简明教程](https://github.com/abbshr/abbshr.github.io/issues/22)
+* 客户端是标准的 [SOCKS5](https://zh.wikipedia.org/wiki/SOCKS) 服务器, `客户端` 与远端 web `服务器` 以 `HTTPS` 协议通讯, 通讯内容是协商升级成 [WebSocket](https://zh.wikipedia.org/wiki/WebSocket) 协议, 协商成功后, 就以 `WebSocket` 协议进行基于长连接的数据交换, 直到某一方关闭连接. 
+    > [WebSocket 简明教程](https://github.com/abbshr/abbshr.github.io/issues/22)
 * 交换的数据可经过 `SS`/`SSR` 加密算法处理, 甚至不用加密, 因为经 `HTTPS` 协议传输的内容, 包括请求路径`URL`, 数据等, 都是经过强加密的, `GFW` 破解不了, 即便 `GFW` 牛逼到真能破解了, 那 `HTTPS` 协议本身也就该升级换代了.
 * 充当 `反向代理` 的 web 服务器必须有正式的域名, 有真正的数字证书. 这些可以通过 [freenom.com](https://freenom.com) 和 [letsencrypt.org](https://letsencrypt.org/) `免费` 或 `付费` 获得, 后续的安装教程有详细讲解.
 * 远端 `反向代理` 条目 `URL` 字串必须足够复杂, 足够随机, 以增加 `GFW` 穷举法猜算出来的难度. 一个随机生成的 `UUID` 字串就足够 `GFW` 喝一壶的, 况且我们也可以随时更换.
