@@ -17,7 +17,3 @@
 [客户端用法](./客户端用法)
 
 [QR code scheme](./QR-code-scheme)
-
-[Server Logic](./Server-Logic)
-
-[Client Logic](./Client-Logic)
