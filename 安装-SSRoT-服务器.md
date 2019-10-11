@@ -16,7 +16,7 @@ sudo -i
 ```
 apt-get update -y
 apt-get install make zlib1g zlib1g-dev build-essential autoconf libtool openssl libssl-dev -y
-apt install python3 python python-minimal cmake git -y
+apt install python3 python python-minimal cmake git wget -y
 
 ```
 
