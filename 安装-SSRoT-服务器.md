@@ -142,6 +142,9 @@ vi /etc/nginx/conf.d/ssr.conf
         index index.html index.htm index.nginx-debian.html;
         root  /fakesite;
 
+        location /.well-known/acme-challenge/ {
+        }
+
         location / {
             rewrite ^/(.*)$ https://mygoodsite.com/$1 permanent;
         }
