@@ -20,7 +20,7 @@ apt install python3 python python-minimal cmake git wget -y
 
 ```
 
-# 安装 `nginx` 软件
+# 安装 web 服务器 `nginx` 软件
 
 安装 `web` 服务器 [nginx](https://nginx.org) 软件.
 命令为
