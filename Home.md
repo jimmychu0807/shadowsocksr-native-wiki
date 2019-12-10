@@ -2,7 +2,7 @@
 - [序言](#序言)
 - [反向代理](#反向代理)
 - [SSR over TLS 原理](#ssr-over-tls-原理)
-- [SSRoT 技术概览](#ssrot-技术概览)
+- [SSRoT 技术关键点](#ssrot-技术关键点)
 
 [English tutorial](https://palitechsociety.blogspot.com/2019/08/shadowsocksr-over-tls-ssrot-server.html)
 
@@ -54,7 +54,7 @@ SSR over TLS (简称 `SSRoT`) 就是直接利用了 `反向代理`, 在现代 we
 
 这项技术对于 `外国` 在华 `记者` 更是重大利好, 不用费劲吧啦地到处找翻墙梯子, 直接在 `于中国可访问的` 境外自家网站上的 web 服务器上添加一个 `反向代理` 特殊 `URL` 条目, 单独部署一 `SSRoT` 服务器, 就可通过 `SSRoT` 客户端访问墙外内容了.
 
-# `SSRoT` 技术概览
+# `SSRoT` 技术关键点
 
 * 客户端是标准的 [SOCKS5](https://zh.wikipedia.org/wiki/SOCKS) 服务器, `客户端` 与远端 web `服务器` 以 `HTTPS` 协议通讯, 通讯内容是协商升级成 [WebSocket](https://zh.wikipedia.org/wiki/WebSocket) 协议, 协商成功后, 就以 `WebSocket` 协议进行基于长连接的数据交换, 直到某一方关闭连接. 
     > [WebSocket 简明教程](https://github.com/abbshr/abbshr.github.io/issues/22)
