@@ -31,6 +31,8 @@
 
 举个例子，某用户访问 `http://www.example.com/readme` ，但是 `www.example.com` 上并不存在 `readme` 页面，它是偷偷从另外一台服务器上取回来，然后作为自己的内容返回给用户。但是用户并不知情这个过程。对用户来说，就像是直接从 `www.example.com` 获取 `readme` 页面一样。这里所提到的 `www.example.com` 这个域名对应的 web `服务器` 就设置了 `反向代理` 功能。
 
+![hhh](https://upload.wikimedia.org/wikipedia/commons/6/67/Reverse_proxy_h2g2bob.svg)
+
 `反向代理` 在现时的互联网中应用非常广泛。
 
 # `SSR` `over` `TLS` 原理
