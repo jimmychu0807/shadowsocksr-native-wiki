@@ -178,7 +178,7 @@ vi /fakesite_cert/renew_cert.sh
 #!/bin/bash
 
 cd /fakesite_cert/
-python acme_tiny.py --account-key ./account.key --csr ./domain.csr --acme-dir $/fakesite/.well-known/acme-challenge/ > ./signed.crt || exit
+python acme_tiny.py --account-key ./account.key --csr ./domain.csr --acme-dir /fakesite/.well-known/acme-challenge/ > ./signed.crt || exit
 wget -O - https://letsencrypt.org/certs/lets-encrypt-x3-cross-signed.pem > intermediate.pem
 cat signed.crt intermediate.pem > chained.pem
 nginx -s reload
