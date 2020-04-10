@@ -100,6 +100,9 @@ cat intermediate.pem root.pem > full_chained.pem
 cd ${org_pwd}
 
 ```
+
+> 安装证书失败的绝大部分原因参阅 [这里](./%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C#%E5%B0%86-%E5%9F%9F%E5%90%8D-%E5%92%8C-%E8%99%9A%E6%8B%9F%E4%B8%BB%E6%9C%BA-%E7%9A%84-ip-%E5%85%B3%E8%81%94%E4%B8%8A)
+
 经过这样一通**骚**操作, 我们就已经在 `/fakesite_cert` 文件夹里创建好了数字证书.
 
 参考资料 [Let's Encrypt，免费好用的 HTTPS 证书](https://imququ.com/post/letsencrypt-certificate.html)
