@@ -30,9 +30,24 @@ echo "/var/crash/core-%e-%p-%s-%t" > /proc/sys/kernel/core_pattern
 
 ![image](https://user-images.githubusercontent.com/30760636/79530236-5ad1a480-80a1-11ea-84af-0c8c0567ff26.png) 
 
-- 敲入 `reboot` 命令重启主机
+- 敲入 `reboot` 命令重启主机，当前的准备工作就完成了。
 
 ```
 reboot
 ```
 
+- 当有崩溃事故发生时，再次登入主机，用 ls 命令列出 `/var/crash/` 文件夹里的文件，找到具体的 `崩溃转储` 文件名，然后用 `gdb` 命令查看崩溃现场，比如我这里就是像这样
+
+```
+gdb a.out /var/crash/core-a.out-1269-11-1587093689
+```
+
+![image](https://user-images.githubusercontent.com/30760636/79531884-27454900-80a6-11ea-9843-65502c195c82.png)
+
+具体到 `SSR` 服务器，应该使用以下命令行，当然其中的 转储 文件名得换成你机器上的实际名字。
+
+```
+gdb a.out /var/crash/core-a.out-1269-11-1587093689
+```
+
+- 把你看到的信息复制下来，以提交 issue 的方式发给开发者。不胜感激。
