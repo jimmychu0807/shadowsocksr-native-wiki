@@ -47,7 +47,9 @@ gdb a.out /var/crash/core-a.out-1269-11-1587093689
 具体到 `SSR` 服务器，应该使用以下命令行，当然其中的 转储 文件名得换成你机器上的实际名字。
 
 ```
-gdb a.out /var/crash/core-a.out-1269-11-1587093689
+gdb /usr/bin/ssr-server /var/crash/core-ssr-server-1269-11-1587093689
 ```
 
-- 把你看到的信息复制下来，以提交 issue 的方式发给开发者。不胜感激。
+- 把你看到的信息复制下来，以提交 issue 的方式发给开发者，不胜感激。
+
+> 参考资料: [coredump配置、产生、分析以及分析示例](https://www.cnblogs.com/arnoldlu/p/11160510.html)
