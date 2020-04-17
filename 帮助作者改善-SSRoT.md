@@ -26,3 +26,9 @@ echo "/var/crash/core-%e-%p-%s-%t" > /proc/sys/kernel/core_pattern
 
 ![image](https://user-images.githubusercontent.com/30760636/79530236-5ad1a480-80a1-11ea-84af-0c8c0567ff26.png) 
 
+- 敲入 `reboot` 命令重启主机
+
+```
+reboot
+```
+
