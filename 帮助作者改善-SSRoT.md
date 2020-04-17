@@ -12,7 +12,7 @@
 vi /etc/profile
 ```
 
-- 在 `/etc/profile` 文件的末尾，添加如下命令
+- 按下 `i` 键（是 `i`, `I`, 不是 `L`, 也不是 `1`）让 `vi` 切换到文本编辑模式，在 `/etc/profile` 文件的末尾，添加如下命令
 
 ```
 sysctl -p -q -e
@@ -21,4 +21,8 @@ mkdir /var/crash
 echo "/var/crash/core-%e-%p-%s-%t" > /proc/sys/kernel/core_pattern
 
 ```
+
+像下图这个样子，然后按下 `ESC` 键退出编辑模式，敲入 `:wq` 和 回车 这 **四个** 键（`冒号` `w` `q` `回车`）保存修改并退出 `vi` 编辑器。
+
+![image](https://user-images.githubusercontent.com/30760636/79530236-5ad1a480-80a1-11ea-84af-0c8c0567ff26.png) 
 
