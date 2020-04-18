@@ -33,7 +33,7 @@ echo "/core-%e-%p-%s-%t" > /proc/sys/kernel/core_pattern
 chmod +x /etc/rc.local
 ```
 
-- 用 `vi` 编辑 `/etc/security/limits.conf` 文件, 设置所有用户 core file size soft 和 hard limit 为 unlimited。打开文件的命令是 `vi /etc/security/limits.conf`，在文件内输入如下文本，像下图这个样子。
+- 用 `vi` 编辑 `/etc/security/limits.conf` 文件, 设置所有用户 core file size soft 和 hard limit 为 unlimited。打开文件的命令是 `vi /etc/security/limits.conf`，像上一步一样，在文件内输入如下文本，并保存退出，像下图这个样子。
 
 ```
 *        soft        core          unlimited
