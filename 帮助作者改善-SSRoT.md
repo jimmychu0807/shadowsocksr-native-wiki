@@ -61,6 +61,8 @@ gdb /usr/bin/ssr-server /core-dump-ssr-server-3140-11-1587191352
 
 - 把你看到的信息复制下来，以提交 issue 的方式发给开发者，不胜感激。
 
+- 经常检查你的根目录，看有没有 `转储文件` 有的话请将分析后的结果发给开发者，大家共同完善软件。
+
 > 参考资料: [coredump配置、产生、分析以及分析示例](https://www.cnblogs.com/arnoldlu/p/11160510.html)
 
 > 参考资料: [systemd service 如何开启 core dump](https://zhuanlan.zhihu.com/p/41153588)
