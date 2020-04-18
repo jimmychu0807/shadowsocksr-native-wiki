@@ -61,4 +61,5 @@ gdb /usr/bin/ssr-server /core-ssr-server-1262-11-1587098808
 - 把你看到的信息复制下来，以提交 issue 的方式发给开发者，不胜感激。
 
 > 参考资料: [coredump配置、产生、分析以及分析示例](https://www.cnblogs.com/arnoldlu/p/11160510.html)
+
 > 参考资料: [systemd service 如何开启 core dump](https://zhuanlan.zhihu.com/p/41153588)
