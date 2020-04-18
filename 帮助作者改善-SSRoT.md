@@ -51,10 +51,10 @@ reboot
 - 当有崩溃事故发生时，再次登入主机，用 `ls / | grep ssr` 命令列出根目录 `/` 文件夹里文件名带 `ssr` 字样的文件，找到具体的 `崩溃转储` 文件名，然后用 `gdb` 命令查看崩溃现场，比如我这里就是像这样
 
 ```
-gdb /usr/bin/ssr-server /core-ssr-server-1262-11-1587098808
+gdb /usr/bin/ssr-server /core-dump-ssr-server-3140-11-1587191352
 ```
 
-![image](https://user-images.githubusercontent.com/30760636/79533514-9f157280-80aa-11ea-985b-8a80bb98d09b.png)
+![image](https://user-images.githubusercontent.com/30760636/79630202-e458a380-8181-11ea-80b2-d40e7cb25a13.png)
 
 具体到你的情况，其中的 转储 文件名得换成你机器上的实际存在的名字。
 
