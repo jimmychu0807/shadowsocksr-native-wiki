@@ -41,7 +41,7 @@ chmod +x /etc/rc.local
 ```
 ![image](https://user-images.githubusercontent.com/30760636/79629617-a6f21700-817d-11ea-85f8-aeed0c6b4983.png)
 
-> 如果希望对系统 `systemd service` 全局设置，可修改 `/etc/systemd/system.conf` 文件。加入设置 `DefaultLimitCORE=infinity`。
+> 如果希望对系统 `systemd service` 全局设置，可修改 `/etc/systemd/system.conf` 文件。加入设置 `DefaultLimitCORE=infinity`。当然这一步不是必须的。
 
 - 敲入 `reboot` 命令重启主机，当前的准备工作就完成了。
 
