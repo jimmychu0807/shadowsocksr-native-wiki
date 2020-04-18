@@ -10,25 +10,22 @@
 sudo su
 ```
 
-- 用 `vi` 编辑软件打开本机的全局配置文件 `/etc/profile`
+- 用 `vi` 编辑软件打开本机的全局配置文件 `/etc/rc.local`
 
 ```
-vi /etc/profile
+vi /etc/rc.local
 ```
 
-- 按下 `i` 键（是 `i`, `I`, 不是 `L`, 也不是 `1`）让 `vi` 切换到文本编辑模式，按动 `下箭头` 移动文本插入点到 `/etc/profile` 文件的末尾，添加如下命令
+- 按下 `i` 键（是 `i`, `I`, 不是 `L`, 也不是 `1`）让 `vi` 切换到文本编辑模式，按动 `下箭头` 移动文本插入点到 `/etc/rc.local` 文件的末尾的 exit 指令之前，添加如下命令
 
 ```
-sysctl -p -q -e
-ulimit -c unlimited
-mkdir /var/crash
-echo "/var/crash/core-%e-%p-%s-%t" > /proc/sys/kernel/core_pattern
+echo "/core-%e-%p-%s-%t" > /proc/sys/kernel/core_pattern
 
 ```
 
 像下图这个样子，然后按下 `ESC` 键退出编辑模式，并敲入 `:wq` 和 回车 这 **四个** 键（`冒号` `w` `q` `回车`）保存修改并退出 `vi` 编辑器。
 
-![image](https://user-images.githubusercontent.com/30760636/79530236-5ad1a480-80a1-11ea-84af-0c8c0567ff26.png) 
+![image](https://user-images.githubusercontent.com/30760636/79629247-93917c80-817a-11ea-8f4f-3c89d7035cf5.png)
 
 - 敲入 `reboot` 命令重启主机，当前的准备工作就完成了。
 
@@ -49,3 +46,4 @@ gdb /usr/bin/ssr-server /var/crash/core-ssr-server-1262-11-1587098808
 - 把你看到的信息复制下来，以提交 issue 的方式发给开发者，不胜感激。
 
 > 参考资料: [coredump配置、产生、分析以及分析示例](https://www.cnblogs.com/arnoldlu/p/11160510.html)
+> 参考资料: [systemd service 如何开启 core dump](https://zhuanlan.zhihu.com/p/41153588)
