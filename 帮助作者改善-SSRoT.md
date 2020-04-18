@@ -27,6 +27,12 @@ echo "/core-%e-%p-%s-%t" > /proc/sys/kernel/core_pattern
 
 ![image](https://user-images.githubusercontent.com/30760636/79629247-93917c80-817a-11ea-8f4f-3c89d7035cf5.png)
 
+- 敲入 `chmod +x /etc/rc.local` 命令为 `rc.local` 加入 `可执行` 属性。
+
+```
+chmod +x /etc/rc.local
+```
+
 - 敲入 `reboot` 命令重启主机，当前的准备工作就完成了。
 
 ```
