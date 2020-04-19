@@ -43,6 +43,10 @@ chmod +x /etc/rc.local
 
 > 如果希望对系统 `systemd service` 全局设置，可修改 `/etc/systemd/system.conf` 文件。加入设置 `DefaultLimitCORE=infinity`。当然这一步不是必须的。
 
+- SSRoT 服务器的 系统服务 配置文件是 `/lib/systemd/system/ssr-native.service`, 可以用 `vi` 打开编辑, 目前服务崩溃后重启的时间间隔是 35s, 你可以改大或者改小.
+
+![Screen Shot 2020-04-19 at 19 04 48](https://user-images.githubusercontent.com/30760636/79686235-7c818600-8271-11ea-91d4-90c9f02cd3e2.png)
+
 - 敲入 `reboot` 命令重启主机，当前的准备工作就完成了。
 
 ```
