@@ -47,7 +47,6 @@ rm -rf /etc/nginx/sites-enabled/default
 
 创建我们的假站点文件夹 `/fakesite`, 并把样本主页文件复制到这里.
 ```
-mkdir /fakesite
 mkdir -p /fakesite/.well-known/acme-challenge/
 cp /var/www/html/*.* /fakesite
 
