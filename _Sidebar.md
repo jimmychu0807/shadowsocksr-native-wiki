@@ -1,5 +1,3 @@
-[帮助作者改善 SSRoT](./帮助作者改善-SSRoT)
-
 [SSRoT 概要](./Home)
 
 [安装前的准备工作](./准备工作)
@@ -19,3 +17,5 @@
 [客户端用法](./客户端用法)
 
 [QR code scheme](./QR-code-scheme)
+
+[帮助作者改善 SSRoT](./帮助作者改善-SSRoT)
