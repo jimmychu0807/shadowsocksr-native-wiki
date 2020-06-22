@@ -5,7 +5,7 @@
 
 用 vi 编辑文件 /etc/sysctl.conf
 ```
-sudo gedit /etc/sysctl.conf
+sudo vi /etc/sysctl.conf
 ```
 
 在文件的最后加入下面的行。
