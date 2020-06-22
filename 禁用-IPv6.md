@@ -22,7 +22,7 @@ sudo sysctl -p
 ```
 
 检查 `ifconfig` 的输出，这里应该没有 IPv6 地址了。
-> 如果 `ifconfig` 尚未安装, 就用 `sudo apt install net-tools` 装上
+> 如果 `ifconfig` 尚未安装, 就用 `sudo apt install net-tools` 命令装上
 
 ```
 ifconfig
