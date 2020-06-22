@@ -21,7 +21,9 @@ net.ipv6.conf.lo.disable_ipv6=1
 sudo sysctl -p
 ```
 
-检查 `ifconfig` 的输出，这里应该没有 IPv6 地址了。(如果 `ifconfig` 还没安装, 就用 `sudo apt install net-tools` 装上)
+检查 `ifconfig` 的输出，这里应该没有 IPv6 地址了。
+> 如果 `ifconfig` 尚未安装, 就用 `sudo apt install net-tools` 装上
+
 ```
 ifconfig
 ```
