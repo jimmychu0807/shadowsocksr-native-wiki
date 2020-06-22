@@ -18,4 +18,6 @@
 
 [QR code scheme](./QR-code-scheme)
 
+[禁用 IPv6](./禁用-IPv6)
+
 [帮助作者改善 SSRoT](./帮助作者改善-SSRoT)
