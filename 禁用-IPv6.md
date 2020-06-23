@@ -16,7 +16,7 @@ net.ipv6.conf.default.disable_ipv6=1
 net.ipv6.conf.lo.disable_ipv6=1
 ```
 
-保存并关闭, 然后重启 `sysctl`
+保存并关闭文件, 然后重启 `sysctl`
 ```
 sudo sysctl -p
 ```
