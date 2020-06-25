@@ -37,4 +37,4 @@ collisions:0 txqueuelen:1000
 RX bytes:1501691(1.5 MB) TX bytes:104883(104.8 KB)
 ```
 
-如果不行，尝试重启系统并再次检查 `ifconfig`
+如果不行，尝试重启系统 `reboot` 并再次检查 `ifconfig`
