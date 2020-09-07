@@ -161,7 +161,7 @@ vi /etc/nginx/conf.d/ssr.conf
 
 随机字串 的生成很简单, 如下命令足矣, 注意查看生成的字串, 如果含有斜杠 `/` 加号 `+` 或者等号 `=`, 就再次生成, 直到没有为止.
 ```
-head /dev/urandom | tr -dc A-Za-z0-9 | head -c 16
+head -c 12 /dev/random | base64
 
 ```
 最后使用下列命令使配置生效
