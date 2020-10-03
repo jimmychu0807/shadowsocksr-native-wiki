@@ -16,7 +16,7 @@ sudo -i
 ```
 apt-get update -y
 apt-get install make zlib1g zlib1g-dev build-essential autoconf libtool openssl libssl-dev -y
-apt install python3 python python-minimal cmake git wget -y
+apt install python3 python python-minimal cmake git wget curl -y
 
 ```
 
@@ -88,7 +88,7 @@ cd /fakesite_cert
 openssl genrsa 4096 > account.key
 openssl genrsa 4096 > domain.key
 openssl req -new -sha256 -key domain.key -subj "/" -reqexts SAN -config <(cat /etc/ssl/openssl.cnf <(printf "[SAN]\nsubjectAltName=DNS:mygoodsite.com,DNS:www.mygoodsite.com")) > domain.csr
-wget https://raw.githubusercontent.com/diafygi/acme-tiny/master/acme_tiny.py
+curl -L https://raw.githubusercontent.com/diafygi/acme-tiny/master/acme_tiny.py -o acme_tiny.py
 python acme_tiny.py --account-key ./account.key --csr ./domain.csr --acme-dir /fakesite/.well-known/acme-challenge/ > ./signed.crt
 wget -O - https://letsencrypt.org/certs/lets-encrypt-x3-cross-signed.pem > intermediate.pem
 cat signed.crt intermediate.pem > chained.pem
