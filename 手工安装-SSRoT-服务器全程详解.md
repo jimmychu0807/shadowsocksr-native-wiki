@@ -39,9 +39,9 @@ include /etc/nginx/sites-enabled/*;
 
 第二行表明 `/etc/nginx/sites-enabled/` 文件夹内所有文件都会包含进配置, 目前只有一个文件 `default`, 因此该文件全路径即为 `/etc/nginx/sites-enabled/default`, 该文件内指明了 `web` 站点首页文件是 `/var/www/html/index.html`.
 
-为了避免这个文件对我们以后的操作造成困惑、干扰. 把这个文件删了再说
+为了避免这个文件对我们以后的操作造成困惑、干扰. 把这个文件移走了再说
 ```
-rm -rf /etc/nginx/sites-enabled/default
+mv /etc/nginx/sites-enabled/default /nginx-default
 
 ```
 
