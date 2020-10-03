@@ -171,13 +171,9 @@ nginx -s reload
 
 ```
 # 证书自动更新 计划任务 设置
-用 `vi` 在 `/fakesite_cert` 文件夹 创建 计划任务脚本 `renew_cert.sh`
+用 `cat` 在 `/fakesite_cert` 文件夹 创建 计划任务脚本 `renew_cert.sh`
 ```
-vi /fakesite_cert/renew_cert.sh
-
-```
-通过 `vi` 输入如下内容
-```
+cat > /fakesite_cert/renew_cert.sh <<EOF
 #!/bin/bash
 
 cd /fakesite_cert/
@@ -185,6 +181,9 @@ python acme_tiny.py --account-key ./account.key --csr ./domain.csr --acme-dir /f
 wget -O - https://letsencrypt.org/certs/lets-encrypt-x3-cross-signed.pem > intermediate.pem
 cat signed.crt intermediate.pem > chained.pem
 nginx -s reload
+
+EOF
+
 ```
 然后给这个文件赋予 可执行 属性
 ```
