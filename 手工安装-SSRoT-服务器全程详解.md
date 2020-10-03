@@ -57,7 +57,8 @@ cp /var/www/html/*.* /fakesite
 rm -rf /etc/nginx/conf.d/*
 cat > /etc/nginx/conf.d/ssr.conf <<EOF
     server {
-        listen 80;
+        listen 80 default_server;
+        listen [::]:80 default_server;
         server_name localhost;
         index index.html index.htm index.nginx-debian.html;
         root  /fakesite;
@@ -116,6 +117,7 @@ vi /etc/nginx/conf.d/ssr.conf
 ```
     server {
         listen 443 ssl;
+        listen [::]:443 ssl;
         ssl on;
         ssl_certificate       /fakesite_cert/chained.pem;
         ssl_certificate_key   /fakesite_cert/domain.key;
@@ -137,7 +139,8 @@ vi /etc/nginx/conf.d/ssr.conf
     }
 
     server {
-        listen 80;
+        listen 80 default_server;
+        listen [::]:80 default_server;
         server_name mygoodsite.com;
         index index.html index.htm index.nginx-debian.html;
         root  /fakesite;
