@@ -55,17 +55,15 @@ cp /var/www/html/*.* /fakesite
 在 `/etc/nginx/conf.d/` 文件夹内创建 子 配置文件 `ssr.conf`, 并用 `vi` 软件进行编辑
 ```
 rm -rf /etc/nginx/conf.d/*
-vi /etc/nginx/conf.d/ssr.conf
-
-```
-通过 `vi` 输入如下内容
-```
+cat > /etc/nginx/conf.d/ssr.conf <<EOF
     server {
         listen 80;
         server_name localhost;
         index index.html index.htm index.nginx-debian.html;
         root  /fakesite;
     }
+EOF
+
 ```
 然后使用下列命令让 nginx 重新加载配置使其生效
 ```
