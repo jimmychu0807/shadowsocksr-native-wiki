@@ -52,7 +52,7 @@ cp /var/www/html/*.* /fakesite
 
 ```
 
-在 `/etc/nginx/conf.d/` 文件夹内创建 子 配置文件 `ssr.conf`, 并用 `vi` 软件进行编辑
+在 `/etc/nginx/conf.d/` 文件夹内全新创建 子 配置文件 `ssr.conf`, 使用 `cat` 命令完成
 ```
 rm -rf /etc/nginx/conf.d/*
 cat > /etc/nginx/conf.d/ssr.conf <<EOF
