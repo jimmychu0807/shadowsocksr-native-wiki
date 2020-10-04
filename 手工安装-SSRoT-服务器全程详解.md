@@ -203,7 +203,7 @@ service cron start
 
 使用如下命令安装 SSR 服务器.
 ```
-wget --no-check-certificate https://raw.githubusercontent.com/ShadowsocksR-Live/shadowsocksr-native/master/install/ssrn-install.sh
+curl -L https://raw.githubusercontent.com/ShadowsocksR-Live/shadowsocksr-native/master/install/ssrn-install.sh -o ssrn-install.sh
 chmod +x ssrn-install.sh
 ./ssrn-install.sh 2>&1 | tee ssr-n.log
 
