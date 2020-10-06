@@ -267,3 +267,5 @@ systemctl restart ssr-native.service
 | 假网站的安全证书文件存放目录           | /fakesite_cert/ |
 | SSR 可执行文件的全路径                | /usr/bin/ssr-server |
 | SSR 配置文件全路径                    | /etc/ssr-native/config.json |
+
+> 注意：对于某些开启了 IPv4 / IPv6 双栈的服务器，请求目标网站地址时可能会失败，这时你得 [关掉整个主机的 IPv6 支持](./%E7%A6%81%E7%94%A8-IPv6)。至于 IPv6-only 的主机，另有专文讲述，小白看不懂。
