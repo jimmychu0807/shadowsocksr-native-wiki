@@ -25,7 +25,7 @@ chmod +x ssrn-ot-install.sh
 
 > 注意：对于某些开启了 IPv4 / IPv6 双栈的服务器，请求目标网站地址时可能会失败，这时你得 [关掉整个主机的 IPv6 支持](./%E7%A6%81%E7%94%A8-IPv6)。
 
-## IPv6-only 主机上安装脚本，不要乱用
+## IPv6-only 主机上安装 SSRoT 脚本，不要乱用
 ```
 wget --no-check-certificate https://raw.githubusercontent.com/ShadowsocksR-Live/shadowsocksr-native/master/install/ssrn-ot-install-ipv6.sh
 chmod +x ssrn-ot-install-ipv6.sh
