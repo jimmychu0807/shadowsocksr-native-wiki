@@ -35,7 +35,9 @@ chmod +x ssrn-ot-install-ipv6.sh
 
 ## IBM cloud 云服务器上安装
 
-安装过程中，仅 应用名称 是必须输入的，其它的一路回车就可以了。
+创建 IBM cloud 云服务实例时，选 Java 或 Node.js 类型，内存大小随意。
+
+安装过程中，仅 应用名称 是必须输入的，内存大小与创建实例时要匹配，其它的一路回车就可以了。
 
 ```
 wget https://raw.githubusercontent.com/ShadowsocksR-Live/shadowsocksr-native/master/install/ibmcloud.sh
