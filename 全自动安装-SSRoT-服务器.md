@@ -33,6 +33,7 @@ chmod +x ssrn-ot-install-ipv6.sh
 ```
 
 ## IBM cloud 云服务器上安装
+安装过程中，仅 应用名称 是必须输入的，其它的一路回车就可以了。
 ```
 wget https://raw.githubusercontent.com/ShadowsocksR-Live/shadowsocksr-native/master/install/ibmcloud.sh
 bash ibmcloud.sh
