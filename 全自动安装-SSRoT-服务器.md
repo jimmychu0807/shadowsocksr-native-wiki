@@ -34,6 +34,7 @@ chmod +x ssrn-ot-install-ipv6.sh
 
 ## IBM cloud 云服务器上安装
 安装过程中，仅 应用名称 是必须输入的，其它的一路回车就可以了。
+由于 IBM 对滥用其云服务的打击力度加大，对于白嫖族来说, 部署在他们的免费资源上其实意义不大，一般几个小时就销号；但如果付费购买一个的话，应该是个不错的选择。
 ```
 wget https://raw.githubusercontent.com/ShadowsocksR-Live/shadowsocksr-native/master/install/ibmcloud.sh
 bash ibmcloud.sh
