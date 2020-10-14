@@ -27,7 +27,7 @@ chmod +x ssrn-ot-install.sh
 
 ## IPv6-only 主机上安装 SSRoT 专用脚本，不要乱用
 ```
-wget --no-check-certificate https://raw.githubusercontent.com/ShadowsocksR-Live/shadowsocksr-native/master/install/ssrn-ot-install-ipv6.sh
+wget https://raw.githubusercontent.com/ShadowsocksR-Live/shadowsocksr-native/master/install/ssrn-ot-install-ipv6.sh
 chmod +x ssrn-ot-install-ipv6.sh
 ./ssrn-ot-install-ipv6.sh 2>&1 | tee ssr-n-ot.log
 ```
