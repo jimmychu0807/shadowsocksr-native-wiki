@@ -44,4 +44,4 @@ wget https://raw.githubusercontent.com/ShadowsocksR-Live/shadowsocksr-native/mas
 bash ibmcloud.sh
 ```
 
-由于 IBM 对滥用其云服务的打击力度加大，对于白嫖族来说, 部署在他们的免费资源上其实意义不大，一般几个小时就销号；但如果付费购买一个的话，应该是个不错的选择。
+由于 IBM 对滥用其云服务的打击力度加大，对于白嫖族来说, 部署在他们的免费资源上其实意义不大，一般几个小时就销号；但如果付费购买一个，应该是个不错的选择。
