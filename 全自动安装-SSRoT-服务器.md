@@ -31,3 +31,9 @@ wget --no-check-certificate https://raw.githubusercontent.com/ShadowsocksR-Live/
 chmod +x ssrn-ot-install-ipv6.sh
 ./ssrn-ot-install-ipv6.sh 2>&1 | tee ssr-n-ot.log
 ```
+
+## IBM cloud 云服务器上安装
+```
+wget https://raw.githubusercontent.com/ShadowsocksR-Live/shadowsocksr-native/master/install/ibmcloud.sh
+bash ibmcloud.sh
+```
