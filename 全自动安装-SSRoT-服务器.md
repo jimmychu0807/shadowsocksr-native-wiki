@@ -45,3 +45,9 @@ bash ibmcloud.sh
 ```
 
 由于 IBM 对滥用其免费云服务的打击力度加大，对于白嫖族来说, 部署 SSRoT 在 IBM 免费服务器上其实意义不大，一般几个小时就销号；但如果付费购买一个，应该是个不错的选择。
+
+
+## 在 HeroKu 上部署 SSRoT 服务端
+
+https://github.com/ShadowsocksR-Live/ssr2heroku
+
