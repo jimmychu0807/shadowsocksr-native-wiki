@@ -1,3 +1,5 @@
+## 在 VPS 上安装 SSRoT 服务端
+
 VPS 的操作系统最好是 `ubuntu` `18.04+`
 
 由于涉及到 web 服务器的安装和数字证书的申请, 安装过程较为繁琐复杂, 不可能真的一键到底, 中间有几处需要您输入 `域名`, `端口`, `密码` 等信息, 其中除了 `域名` 必须人工输入以外, 其余都可以使用默认值, 回车即可.
@@ -25,7 +27,7 @@ chmod +x ssrn-ot-install.sh
 
 > 注意：对于某些开启了 IPv4 / IPv6 双栈的服务器，请求目标网站地址时可能会失败，这时你得 [关掉整个主机的 IPv6 支持](./%E7%A6%81%E7%94%A8-IPv6)。
 
-## IPv6-only 主机上安装 SSRoT 专用脚本，不要乱用
+## IPv6-only 主机上安装 SSRoT 服务端专用脚本，不要乱用
 ```
 wget https://raw.githubusercontent.com/ShadowsocksR-Live/shadowsocksr-native/master/install/ssrn-ot-install-ipv6.sh
 chmod +x ssrn-ot-install-ipv6.sh
@@ -33,7 +35,7 @@ chmod +x ssrn-ot-install-ipv6.sh
 ```
 
 
-## IBM cloud 云服务器上安装
+## IBM cloud 云服务器上安装 SSRoT 服务端
 
 创建 IBM cloud 云服务实例时，选 Java 或 Node.js 类型，内存大小随意。
 
