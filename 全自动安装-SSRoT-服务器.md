@@ -67,5 +67,5 @@ bash ibmcloud.sh
 
 ## 在 HeroKu 上部署 SSRoT 服务端
 
-https://github.com/ShadowsocksR-Live/ssr2heroku
+https://github.com/ShadowsocksR-Live/ssr2heroku/tree/main
 
