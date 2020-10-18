@@ -67,7 +67,7 @@ bash ibmcloud.sh
 
 ## 在 HeroKu 上部署 SSRoT 服务端
 
-稀缺资源，请勿滥用，看视频时请采用 144P 分辨率，否则 HeroKu 发飙大家都没得用，You know？
+稀缺资源，请勿滥用，看视频时请采用 144P 分辨率，否则一旦 HeroKu 发飙大家都没得用，You know？
 
 https://github.com/ShadowsocksR-Live/ssr2heroku/tree/main
 
