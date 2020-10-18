@@ -38,7 +38,7 @@ chmod +x update-server.sh
 ./update-server.sh
 
 ```
-执行完毕以后，如果出现绿色的 `active (running)` 字样，表示更新成功，如下图。如果失败，请备份你的配置文件后重新安装。
+执行完毕以后，如果出现绿色的 `active (running)` 字样，表示更新成功，如下图。如果失败，请备份你的配置文件 `/etc/ssr-native/config.json` 到其它文件夹后全新安装。
 
 ![image](https://user-images.githubusercontent.com/30760636/96358628-f53b9f00-113b-11eb-8f95-e4ccdedc7f48.png)
 
