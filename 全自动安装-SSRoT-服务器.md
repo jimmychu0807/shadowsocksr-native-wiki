@@ -27,6 +27,22 @@ chmod +x ssrn-ot-install.sh
 
 > 注意：对于某些开启了 IPv4 / IPv6 双栈的服务器，请求目标网站地址时可能会失败，这时你得 [关掉整个主机的 IPv6 支持](./%E7%A6%81%E7%94%A8-IPv6)。
 
+### 更新现有 SSRoT 服务端方法
+
+执行以下命令就可以自动更新。
+```
+sudo -i
+rm -rf update-server.sh
+wget https://raw.githubusercontent.com/ShadowsocksR-Live/shadowsocksr-native/master/install/update-server.sh
+chmod +x update-server.sh
+./update-server.sh
+
+```
+执行完毕以后，如果出现绿色的 `active (running)` 字样，表示更新成功，如下图。如果失败，请备份你的配置文件后重新安装。
+
+![image](https://user-images.githubusercontent.com/30760636/96358628-f53b9f00-113b-11eb-8f95-e4ccdedc7f48.png)
+
+
 ## IPv6-only 主机上安装 SSRoT 服务端专用脚本，不要乱用
 ```
 wget https://raw.githubusercontent.com/ShadowsocksR-Live/shadowsocksr-native/master/install/ssrn-ot-install-ipv6.sh
