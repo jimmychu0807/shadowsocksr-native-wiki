@@ -65,9 +65,9 @@ bash ibmcloud.sh
 由于 IBM 对滥用其免费云服务的打击力度加大，对于白嫖族来说, 部署 SSRoT 在 IBM 免费服务器上其实意义不大，一般几个小时就销号；但如果付费购买一个，应该是个不错的选择。
 
 
-## 在 HeroKu 上部署 SSRoT 服务端
+## 在 Heroku 上部署 SSRoT 服务端
 
-稀缺资源，请勿滥用，观看视频时请采用 144P 分辨率，否则一旦 HeroKu 发飙大家都没得用，You know？
+稀缺资源，请勿滥用，日常使用中观看视频时请采用 144P 分辨率，否则一旦 Heroku 发飙大家都没得用，You know？
 
 https://github.com/ShadowsocksR-Live/ssr2heroku/tree/main
 
