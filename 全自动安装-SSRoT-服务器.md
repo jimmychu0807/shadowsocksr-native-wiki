@@ -67,8 +67,8 @@ bash ibmcloud.sh
 
 ## 在 Heroku 上部署 SSRoT 服务端
 
-稀缺资源，请勿滥用，日常使用中观看视频时请采用 144P 分辨率，否则一旦 Heroku 发飙大家都没得用，You know？
+稀缺资源，请勿滥用，日常使用中观看视频时请采用 144P 分辨率，否则一旦 [Heroku](https://heroku.com) 发飙大家都没得用，You know？
 
 https://github.com/ShadowsocksR-Live/ssr2heroku/tree/main
 
-Heroku 是有十多年悠久历史的老牌云服务商,稳定可靠,不差钱的各位瓜众请付费购买他们的服务,很超值的.
+[Heroku](https://heroku.com) 是有十多年悠久历史的老牌云服务商,稳定可靠,不差钱的各位瓜众请付费购买他们的服务,很超值的.
