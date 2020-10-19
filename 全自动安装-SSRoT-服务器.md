@@ -71,3 +71,4 @@ bash ibmcloud.sh
 
 https://github.com/ShadowsocksR-Live/ssr2heroku/tree/main
 
+Heroku 是有十多年悠久历史的老牌云服务商,稳定可靠,不差钱的各位瓜众请付费购买他们的服务,很超值的.
