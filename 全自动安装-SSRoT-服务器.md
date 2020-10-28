@@ -44,6 +44,15 @@ chmod +x update-server.sh
 
 
 ## IPv6-only 主机上安装 SSRoT 服务端专用脚本，不要乱用
+
+由于当前各服务商对IPv6的支持普遍较弱，DNS 查询经常卡死，所以登入主机后做的第一件事，让 DNS 查询支持 IPv6/IPv4 网络(参阅 https://nat64.xyz/ )，改写 /etc/resolv.conf 文件：
+
+```
+echo -e "nameserver 2a09:11c0:f1:bbf0::70\nnameserver 2001:67c:2b0::4\nnameserver 2001:67c:2b0::6" > /etc/resolv.conf
+```
+
+然后才运行下列命令行。
+
 ```
 wget https://raw.githubusercontent.com/ShadowsocksR-Live/shadowsocksr-native/master/install/ssrn-ot-install-ipv6.sh
 chmod +x ssrn-ot-install-ipv6.sh
