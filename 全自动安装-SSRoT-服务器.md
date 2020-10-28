@@ -45,7 +45,7 @@ chmod +x update-server.sh
 
 ## IPv6-only 主机上安装 SSRoT 服务端专用脚本，不要乱用
 
-由于当前各服务商对IPv6的支持普遍较弱，DNS 查询经常卡死，所以登入主机后做的第一件事，让 DNS 查询支持 IPv6/IPv4 网络(参阅 https://nat64.xyz/ )，改写 /etc/resolv.conf 文件：
+由于当前各服务商对 IPv6 的支持普遍较弱，DNS 查询经常卡死，所以登入主机后做的第一件事，让 DNS 查询支持 IPv6/IPv4 网络(参阅 https://nat64.xyz/ )，改写 /etc/resolv.conf 文件：
 
 ```
 echo -e "nameserver 2001:67c:2b0::4\nnameserver 2001:67c:2b0::6" > /etc/resolv.conf
@@ -59,7 +59,7 @@ chmod +x ssrn-ot-install-ipv6.sh
 ./ssrn-ot-install-ipv6.sh 2>&1 | tee ssr-n-ot.log
 ```
 
-提醒一下，DNS的解析不稳定，时灵时不灵，所以你没事得登入服务器换换DNS服务器IP玩儿，否则 SSRoT 服务端会间歇性抽风。
+提醒一下，IPv6 DNS 解析不稳定，时灵时不灵，所以你没事得登入 VPS 换换 DNS 服务器 IP 玩儿，否则 SSRoT 服务端会间歇性抽风。
 
 
 ## IBM cloud 云服务器上安装 SSRoT 服务端
