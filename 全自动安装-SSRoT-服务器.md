@@ -59,7 +59,7 @@ chmod +x ssrn-ot-install-ipv6.sh
 ./ssrn-ot-install-ipv6.sh 2>&1 | tee ssr-n-ot.log
 ```
 
-提醒一下，DNS的解析不稳定，时灵时不灵，所以你没事得登入服务器换换DNS服务器IP玩儿，否则代理服务器会间歇性抽风。
+提醒一下，DNS的解析不稳定，时灵时不灵，所以你没事得登入服务器换换DNS服务器IP玩儿，否则 SSRoT 服务端会间歇性抽风。
 
 
 ## IBM cloud 云服务器上安装 SSRoT 服务端
