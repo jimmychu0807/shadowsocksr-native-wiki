@@ -48,7 +48,7 @@ chmod +x update-server.sh
 由于当前各服务商对IPv6的支持普遍较弱，DNS 查询经常卡死，所以登入主机后做的第一件事，让 DNS 查询支持 IPv6/IPv4 网络(参阅 https://nat64.xyz/ )，改写 /etc/resolv.conf 文件：
 
 ```
-echo -e "nameserver 2a09:11c0:f1:bbf0::70\nnameserver 2001:67c:2b0::4\nnameserver 2001:67c:2b0::6" > /etc/resolv.conf
+echo -e "nameserver 2001:67c:2b0::4\nnameserver 2001:67c:2b0::6" > /etc/resolv.conf
 ```
 
 然后才运行下列命令行。
