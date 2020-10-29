@@ -45,7 +45,7 @@ chmod +x update-server.sh
 
 ## IPv6-only 主机上安装 SSRoT 服务端专用脚本，不要乱用
 
-由于当前各服务商对 IPv6 的支持普遍较弱，DNS 查询经常卡死，所以登入主机后做的第一件事，让 DNS 查询支持 IPv6/IPv4 网络(参阅 https://nat64.xyz/ )，在 /etc/resolv.conf 文件开头插入新的记录：
+由于当前各服务商对 IPv6 的支持普遍较弱，DNS 查询经常卡死，所以登入主机后做的第一件事，让 DNS 查询支持 IPv6/IPv4 网络(参阅 https://nat64.xyz/ )，用下列命令在 /etc/resolv.conf 文件开头插入新的记录：
 
 ```
 sed -i '1i\nameserver 2a01:4f8:c2c:123f::1' /etc/resolv.conf
