@@ -82,4 +82,6 @@ bash ibmcloud.sh
 
 https://github.com/ShadowsocksR-Live/ssr2heroku/tree/main
 
+如果你不是重度翻墙用户，建议 使用 [Heroku](https://heroku.com) 的免费主机容器, 用两个账号注册，轮换着每个用半月，基本上日常工作学习的翻墙需求都解决了。
+
 [Heroku](https://heroku.com) 是有十多年悠久历史的老牌云服务商,稳定可靠,不差钱的各位瓜众请付费购买他们的服务,很超值的.
