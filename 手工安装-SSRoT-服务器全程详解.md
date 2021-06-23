@@ -275,6 +275,8 @@ systemctl restart ssr-native.service
 | nginx 针对假网站的配置文件全路径       | /etc/nginx/conf.d/ssr.conf |
 | 假网站的根目录                        | /fakesite/ |
 | 假网站的安全证书文件存放目录           | /fakesite_cert/ |
+| ssl_certificate                     | /fakesite_cert/chained.pem |
+| ssl_certificate_key                 | /fakesite_cert/domain.key |
 | SSR 可执行文件的全路径                | /usr/bin/ssr-server |
 | SSR 配置文件全路径                    | /etc/ssr-native/config.json |
 
