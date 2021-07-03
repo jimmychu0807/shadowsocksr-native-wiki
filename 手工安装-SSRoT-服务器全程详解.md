@@ -86,8 +86,8 @@ org_pwd=`pwd`
 mkdir /fakesite_cert
 cd /fakesite_cert
 openssl genrsa 4096 > account.key
-openssl genrsa 4096 > domain.key
-openssl req -new -sha256 -key domain.key -subj "/" -reqexts SAN -config <(cat /etc/ssl/openssl.cnf <(printf "[SAN]\nsubjectAltName=DNS:mygoodsite.com,DNS:www.mygoodsite.com")) > domain.csr
+openssl genrsa 4096 > private_key.pem
+openssl req -new -sha256 -key private_key.pem -subj "/" -reqexts SAN -config <(cat /etc/ssl/openssl.cnf <(printf "[SAN]\nsubjectAltName=DNS:mygoodsite.com,DNS:www.mygoodsite.com")) > domain.csr
 curl -L https://raw.githubusercontent.com/diafygi/acme-tiny/master/acme_tiny.py -o acme_tiny.py
 python acme_tiny.py --account-key ./account.key --csr ./domain.csr --acme-dir /fakesite/.well-known/acme-challenge/ > ./signed.crt
 wget -O - https://letsencrypt.org/certs/lets-encrypt-x3-cross-signed.pem > intermediate.pem
@@ -130,7 +130,7 @@ vi /etc/nginx/conf.d/ssr.conf
         listen [::]:443 ssl;
         ssl on;
         ssl_certificate       /fakesite_cert/full_chained_cert.pem;
-        ssl_certificate_key   /fakesite_cert/domain.key;
+        ssl_certificate_key   /fakesite_cert/private_key.pem;
         ssl_protocols         TLSv1 TLSv1.1 TLSv1.2;
         ssl_ciphers           HIGH:!aNULL:!MD5;
         server_name           mygoodsite.com;
@@ -276,7 +276,7 @@ systemctl restart ssr-native.service
 | 假网站的根目录                        | /fakesite/ |
 | 假网站的安全证书文件存放目录           | /fakesite_cert/ |
 | ssl_certificate                     | /fakesite_cert/full_chained_cert.pem |
-| ssl_certificate_key                 | /fakesite_cert/domain.key |
+| ssl_certificate_key                 | /fakesite_cert/private_key.pem |
 | SSR 可执行文件的全路径                | /usr/bin/ssr-server |
 | SSR 配置文件全路径                    | /etc/ssr-native/config.json |
 
