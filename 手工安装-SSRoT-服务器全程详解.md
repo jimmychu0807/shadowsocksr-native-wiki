@@ -91,7 +91,7 @@ openssl req -new -sha256 -key private_key.pem -subj "/" -reqexts SAN -config <(c
 curl -L https://raw.githubusercontent.com/diafygi/acme-tiny/master/acme_tiny.py -o acme_tiny.py
 python acme_tiny.py --account-key ./account.key --csr ./domain.csr --acme-dir /fakesite/.well-known/acme-challenge/ > ./signed.crt
 wget -O - https://letsencrypt.org/certs/lets-encrypt-x3-cross-signed.pem > intermediate.pem
-cat signed.crt intermediate.pem > full_chained_cert.pem
+cat signed.crt intermediate.pem > chained_cert.pem
 wget -O - https://letsencrypt.org/certs/isrgrootx1.pem > root.pem
 cat intermediate.pem root.pem > full_chained_cert.pem
 
@@ -129,7 +129,7 @@ vi /etc/nginx/conf.d/ssr.conf
         listen 443 ssl;
         listen [::]:443 ssl;
         ssl on;
-        ssl_certificate       /fakesite_cert/full_chained_cert.pem;
+        ssl_certificate       /fakesite_cert/chained_cert.pem;
         ssl_certificate_key   /fakesite_cert/private_key.pem;
         ssl_protocols         TLSv1 TLSv1.1 TLSv1.2;
         ssl_ciphers           HIGH:!aNULL:!MD5;
@@ -189,7 +189,7 @@ cat > /fakesite_cert/renew_cert.sh <<EOF
 cd /fakesite_cert/
 python acme_tiny.py --account-key ./account.key --csr ./domain.csr --acme-dir /fakesite/.well-known/acme-challenge/ > ./signed.crt || exit
 wget -O - https://letsencrypt.org/certs/lets-encrypt-x3-cross-signed.pem > intermediate.pem
-cat signed.crt intermediate.pem > full_chained_cert.pem
+cat signed.crt intermediate.pem > chained_cert.pem
 nginx -s reload
 
 EOF
@@ -275,7 +275,7 @@ systemctl restart ssr-native.service
 | nginx 针对假网站的配置文件全路径       | /etc/nginx/conf.d/ssr.conf |
 | 假网站的根目录                        | /fakesite/ |
 | 假网站的安全证书文件存放目录           | /fakesite_cert/ |
-| ssl_certificate                     | /fakesite_cert/full_chained_cert.pem |
+| ssl_certificate                     | /fakesite_cert/chained_cert.pem |
 | ssl_certificate_key                 | /fakesite_cert/private_key.pem |
 | SSR 可执行文件的全路径                | /usr/bin/ssr-server |
 | SSR 配置文件全路径                    | /etc/ssr-native/config.json |
