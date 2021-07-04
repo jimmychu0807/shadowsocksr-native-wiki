@@ -25,7 +25,7 @@ apt install python3 python python-minimal cmake git wget curl -y
 安装 `web` 服务器 [nginx](https://nginx.org) 软件.
 命令为
 ```
-apt-get install nginx -y
+apt-get install nginx-extras -y
 
 ```
 完毕以后, 可以敲入 `nginx -v` 查看 `nginx` 的版本号, 也可以通过命令 `which nginx` 查看 `nginx` 到底安装在哪个地方. 
