@@ -1,6 +1,6 @@
 1. First check if your DNS is a remote one or a local one `cat /etc/resolv.conf`. If it's a local one like `192.168.1.1`, it does not a matter, but if the DNS is remote for example `208.67.222.222`, you need to add a route for it(see step 7).
 
-2. Find out your `Default Route`, it's `192.168.28.2` in my ubuntu machine.
+2. Find out your `Default Route` (Gateway), it's `192.168.28.2` in my ubuntu machine.
 
 ![image](https://user-images.githubusercontent.com/30760636/129740880-b428b6da-1afd-46d1-ab8d-a8b27ce329ee.png)
 
