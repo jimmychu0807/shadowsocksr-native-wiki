@@ -8,6 +8,7 @@
 ```
 ./ssr-client -c <your_config_file_full_path>
 ```
+> If you want to proxy SSH, you can replace the command with `ssh -N -C -D 1080 user@123.45.67.89`.
 
 4. Add tun interface
 ```
