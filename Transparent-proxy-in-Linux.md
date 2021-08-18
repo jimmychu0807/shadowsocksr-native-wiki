@@ -30,7 +30,7 @@ badvpn-tun2socks --tundev tun0 --netif-ipaddr 10.0.0.2 --netif-netmask 255.255.2
 sudo route add 208.67.222.222 gw 192.168.28.2 metric 4
 ```
 
-8. Add a route for your SSRoT server **(not 127.0.0.1)**
+8. Add a route for your SSRoT server or your SSH server **(not 127.0.0.1)**
 ```
 sudo route add 123.45.67.89 gw 192.168.28.2 metric 4
 ```
