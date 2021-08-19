@@ -29,7 +29,10 @@ badvpn-tun2socks --tundev tun0 --netif-ipaddr 10.0.0.2 --netif-netmask 255.255.2
 > git clone https://github.com/ambrop72/badvpn.git
 > mkdir badvpn/build && cd badvpn/build
 > cmake -DBUILD_NOTHING_BY_DEFAULT=1 -DBUILD_TUN2SOCKS=1 .. && make
+> sudo rm -rf /usr/local/bin/badvpn-tun2socks
 > sudo cp tun2socks/badvpn-tun2socks /usr/local/bin/
+> cd ../..
+> rm -rf badvpn
 > ```
 
 7. **If your DNS is a remote one**, add a route to it with a lower metric than the tun one (lower than metric on step 9)
