@@ -24,7 +24,7 @@ sudo ifconfig tun0 10.0.0.1 netmask 255.255.255.0
 ```
 badvpn-tun2socks --tundev tun0 --netif-ipaddr 10.0.0.2 --netif-netmask 255.255.255.0 --socks-server-addr 127.0.0.1:1080 &
 ```
-> building `tun2socks` from source code is very easy. here are the steps
+> Building `tun2socks` from source code under Linux is very easy. here are the steps
 > ```
 > git clone https://github.com/ambrop72/badvpn.git
 > mkdir badvpn/build && cd badvpn/build
