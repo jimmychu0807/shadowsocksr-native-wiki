@@ -27,8 +27,8 @@ badvpn-tun2socks --tundev tun0 --netif-ipaddr 10.0.0.2 --netif-netmask 255.255.2
 > building `tun2socks` from source code is very easy. here are the steps
 > ```
 > git clone https://github.com/ambrop72/badvpn.git
-> cd badvpn && mkdir build && cd build
-> cmake -DBUILD_NOTHING_BY_DEFAULT=1 -DBUILD_TUN2SOCKS=1 ..
+> mkdir badvpn/build && cd badvpn/build
+> cmake -DBUILD_NOTHING_BY_DEFAULT=1 -DBUILD_TUN2SOCKS=1 .. && make
 > sudo cp tun2socks/badvpn-tun2socks /usr/local/bin/
 > ```
 
