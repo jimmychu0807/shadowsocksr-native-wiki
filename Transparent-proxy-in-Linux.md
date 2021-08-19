@@ -24,6 +24,13 @@ sudo ifconfig tun0 10.0.0.1 netmask 255.255.255.0
 ```
 badvpn-tun2socks --tundev tun0 --netif-ipaddr 10.0.0.2 --netif-netmask 255.255.255.0 --socks-server-addr 127.0.0.1:1080 &
 ```
+> building `tun2socks` from source code is very easy. here are the steps
+> ```
+> git clone https://github.com/ambrop72/badvpn.git
+> cd badvpn && mkdir build && cd build
+> cmake -DBUILD_NOTHING_BY_DEFAULT=1 -DBUILD_TUN2SOCKS=1 ..
+> sudo cp tun2socks/badvpn-tun2socks /usr/local/bin/
+> ```
 
 7. **If your DNS is a remote one**, add a route to it with a lower metric than the tun one (lower than metric on step 9)
 ```
