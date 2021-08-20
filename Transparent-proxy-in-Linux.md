@@ -1,3 +1,5 @@
+### Tutorial
+
 1. First check if your DNS is a remote one or a local one `cat /etc/resolv.conf`. If it's a local one like `192.168.1.1`, it does not a matter, but if the DNS is remote for example `208.67.222.222`, you need to add a route for it(see step 7).
 
 2. Find out your `Default Route` (Gateway), it's `192.168.28.2` in my ubuntu machine.
@@ -53,3 +55,9 @@ sudo route add default gw 10.0.0.2 metric 6
 ```
 
 Done.
+
+### References
+
+[Linux全局智能分流方案](https://steemit.com/circumvention/@ryyan/linux)
+
+[漫谈各种黑科技式 DNS 技术在代理环境中的应用](https://tachyondevel.medium.com/%E6%BC%AB%E8%B0%88%E5%90%84%E7%A7%8D%E9%BB%91%E7%A7%91%E6%8A%80%E5%BC%8F-dns-%E6%8A%80%E6%9C%AF%E5%9C%A8%E4%BB%A3%E7%90%86%E7%8E%AF%E5%A2%83%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8-62c50e58cbd0)
