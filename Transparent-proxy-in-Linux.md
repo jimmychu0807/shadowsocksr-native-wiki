@@ -56,6 +56,8 @@ sudo route add default gw 10.0.0.2 metric 6
 
 Done.
 
+[Here](https://gist.github.com/ssrlive/dfb3b0b51c65bb7034727c5bd5267053) is the full bash script.
+
 ### References
 
 [Unix & Linux: tun2socks (badvpn)](https://www.youtube.com/watch?v=wBz2Ndwsbpw)
