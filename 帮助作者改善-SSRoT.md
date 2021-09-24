@@ -18,9 +18,10 @@ sudo su
 vi /etc/rc.local
 ```
 
-- 按下 `i` 键（是 `i`, `I`, 不是 `L`, 也不是 `1`）让 `vi` 切换到文本编辑模式，按动 `下箭头` 移动文本插入点到 `/etc/rc.local` 文件的末尾的 exit 指令之前，添加如下命令
+- 按下 `i` 键（是 `i`, `I`, 不是 `L`, 也不是 `1`）让 `vi` 切换到文本编辑模式，按动 `下箭头` 移动文本插入点到 `/etc/rc.local` 文件的末尾的 exit 指令之前，添加如下兩個命令
 
 ```
+sleep 2
 echo "/core-%e-%p-%s-%t" > /proc/sys/kernel/core_pattern
 
 ```
