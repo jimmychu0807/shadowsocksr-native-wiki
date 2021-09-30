@@ -58,7 +58,12 @@ wget https://raw.githubusercontent.com/ShadowsocksR-Live/shadowsocksr-native/mas
 chmod +x ssrn-ot-install-ipv6.sh
 ./ssrn-ot-install-ipv6.sh 2>&1 | tee ssr-n-ot.log
 ```
-
+> 附注；如果您安裝過程中有報錯，可能更新一下系統就解決問題，在 ubuntu 或者 debian 中三條命令如下。
+> ```
+> apt update -y
+> apt upgrade -y
+> apt autoremove -y
+> ```
 提醒一下，IPv6 DNS 解析不稳定，时灵时不灵，所以你没事得登入 VPS 换换 DNS 服务器 IP 玩儿，否则 SSRoT 服务端可能会间歇性抽风。
 
 
