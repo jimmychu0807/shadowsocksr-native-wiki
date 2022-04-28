@@ -5,6 +5,7 @@
 > ```
 > curl ipv6.ip.sb
 > curl ipv4.ip.sb
+> curl ip.sb
 > ```
 
 在 **Ubuntu** 系统上的操作如下.
