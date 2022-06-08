@@ -7,7 +7,7 @@
 [English tutorial](https://palitechsociety.blogspot.com/2019/08/shadowsocksr-over-tls-ssrot-server.html)
 
 # 序言
-好吧! 也许是时候公布新功能了. 关心这个项目的人, 绝大部分懂中文, 咱也就不装了, 不飙英文了, 累.
+好吧! 关心这个项目的人, 绝大部分懂中文, 咱也就不装了, 不飙英文了, 累.
 
 据说 [SS](https://github.com/shadowsocks/shadowsocks/tree/master) 和 [SSR](https://github.com/ShadowsocksR-Live/shadowsocksr) 被 [GFW](https://zh.wikipedia.org/wiki/%E9%98%B2%E7%81%AB%E9%95%BF%E5%9F%8E) 精准识别了, 有2019年6月初的梯子大屠杀为证, 咱也没有必要去辨别真伪了, 此后 **根本不重要** . 
 
@@ -45,7 +45,7 @@ SSR over TLS (简称 `SSRoT`) 就是直接利用了 `反向代理`, 在现代 we
 
 ![Untitled](https://user-images.githubusercontent.com/30760636/62233812-eca65e00-b3fb-11e9-861c-141c5a9eafec.png)
 
-我们的目的是为了避开 `GFW` 的审查，当然不能明晃晃地使用 `HTTP` 明文传输，必须使用 `HTTPS` 协议进行加密通讯, 我们此前的努力就是伪装成正规的 `HTTPS` 协议等, 这次我们不装了, 就使用堂堂正正的 `HTTPS` 协议, 与真正的带域名 和 网站数字安全证书的 web 服务器网站通讯, 这样, 你 `GFW` 没办法了吧?
+我们的目的是为了避开 `GFW` 的审查，当然不能明晃晃地使用 `HTTP` 明文传输，必须使用 `HTTPS` 协议进行加密通讯, 我们此前的努力就是伪装成 `HTTPS` 等协议, 这次我们不装了, 正式使用 `HTTPS` 协议, 与真正的带域名 和 网站数字安全证书的 web 服务器网站通讯, 这样, 你 `GFW` 没办法了吧?
 
 当然, 我党 也不是完全没办法, 有几个:
 * 宣布 `HTTPS` 协议为反党反社会主义的反动协议, 必须坚决予以取缔. —— 你认为会有这么一天吗? 我认为不会, 这完全不具备可操作性. 比较有意思的是, `我党`的 [政府网站](http://www.gov.cn/) 以及一众徒子徒孙们, 全部是 `HTTP`, 而不是 `HTTPS`. 亦可赛艇.
