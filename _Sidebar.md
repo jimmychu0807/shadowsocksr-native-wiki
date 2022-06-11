@@ -27,3 +27,6 @@
 [使用 TOR 浏览器](./使用-TOR-浏览器)
 
 [Transparent proxy in Linux](./Transparent-proxy-in-Linux)
+
+[Transparent proxy in Windows](./Transparent-proxy-in-Windows)
+
