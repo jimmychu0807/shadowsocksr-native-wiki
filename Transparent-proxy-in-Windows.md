@@ -20,4 +20,4 @@ route add 66.123.45.67 192.168.28.2 metric 5
 route add 0.0.0.0 mask 0.0.0.0 10.10.10.1
 ```
 
-![image](https://user-images.githubusercontent.com/30760636/173213944-ffd89ba6-3bff-45a2-bc65-8a46996626a5.png)
+![image](https://user-images.githubusercontent.com/30760636/173217849-643a87b6-39d8-4236-a721-64e3c8ffb171.png)
