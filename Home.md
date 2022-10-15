@@ -23,6 +23,10 @@
 
 > 补记3：2020年5月10日，手贱测试了一把 python 版 SSR，发现 GFW 已经重点关注 python 版本，采用 http_simple 混淆，1小时后端口被封；采用 tls1.2_ticket_auth 混淆，挺不过 12 小时，整个主机 IP 被封，大伙赶紧转移到 SSRoT 上吧，迁移的时间窗口正在消失。
 
+> 补记4: 2022年10月15日，在 GFW 大力屠杀 v2ray, xtls, trojan, xray...之际，各路翻墙软件鬼哭狼嚎哀鸿遍野，依然没有人报告 SSRoT 翻不了墙的案例，我自己的节点也稳稳地运行着。挺好。
+
+> 补记5: 据说 [SSRoT 帮助了伊朗人的抗议活动](https://github.com/ShadowsocksR-Live/iShadowsocksR/issues/77#issue-1394425743)，能为他们提供切实的帮助，作者非常开心。
+
 在正式开始前, 介绍一个概念: `反向代理`.
 
 # 反向代理
