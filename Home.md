@@ -25,7 +25,7 @@
 
 > 补记4: 2022年10月15日，在 GFW 大力屠杀 v2ray, xtls, trojan, xray...之际，各路翻墙软件鬼哭狼嚎哀鸿遍野，依然没有人报告 SSRoT 翻不了墙的案例，我自己的节点也稳稳地运行着。挺好。
 
-> 补记5: 据说 [SSRoT 帮助了伊朗人的抗议活动](https://github.com/ShadowsocksR-Live/iShadowsocksR/issues/77#issue-1394425743)，能为他们提供切实的帮助，作者非常开心。
+> 补记5: 据说 [SSRoT 帮助了伊朗人民的抗议活动](https://github.com/ShadowsocksR-Live/iShadowsocksR/issues/77#issue-1394425743)，能为他们提供切实的帮助，作者非常开心。
 
 在正式开始前, 介绍一个概念: `反向代理`.
 
